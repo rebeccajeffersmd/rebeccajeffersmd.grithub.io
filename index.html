@@ -6,6 +6,12 @@
 
 <title>The Rhythm of Energy | Rebecca Jeffers, MD</title>
 
+<!-- Elegant fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
 
 * {
@@ -19,10 +25,10 @@ html {
 }
 
 body {
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: 'Inter', sans-serif;
     background:
-        radial-gradient(circle at top left, rgba(155,191,148,0.22), transparent 34%),
-        linear-gradient(135deg, #0f172a 0%, #1f365f 48%, #2a4b82 100%);
+        radial-gradient(circle at top left, rgba(155,191,148,0.20), transparent 34%),
+        linear-gradient(135deg, #0b1220 0%, #162746 45%, #2a4b82 100%);
     color: #f8fafc;
     line-height: 1.7;
     min-height: 100vh;
@@ -35,93 +41,100 @@ body {
 }
 
 .shell {
-    background: rgba(255,255,255,0.055);
-    border: 1px solid rgba(255,255,255,0.16);
-    border-radius: 34px;
-    box-shadow: 0 30px 80px rgba(0,0,0,0.34);
-    backdrop-filter: blur(24px);
+    background: rgba(255,255,255,0.045);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 36px;
+    box-shadow: 0 32px 90px rgba(0,0,0,0.38);
+    backdrop-filter: blur(28px);
     overflow: hidden;
 }
 
 .hero {
-    padding: 64px 56px 48px;
+    padding: 72px 64px 54px;
     text-align: center;
 }
 
 .logo {
-    width: 240px;
+    width: 220px;
     max-width: 78%;
-    margin-bottom: 24px;
+    margin-bottom: 26px;
 }
 
 .eyebrow {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family: 'Inter', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 0.18em;
-    font-size: 0.78rem;
-    color: #c7d2fe;
-    margin-bottom: 22px;
-    font-weight: 700;
+    letter-spacing: 0.22em;
+    font-size: 0.76rem;
+    color: rgba(219,234,254,0.82);
+    margin-bottom: 26px;
+    font-weight: 600;
 }
 
 h1 {
-    font-size: clamp(3rem, 7vw, 5.8rem);
-    line-height: 0.92;
-    letter-spacing: -0.07em;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3.4rem, 7vw, 6.2rem);
+    font-weight: 600;
+    line-height: 0.9;
+    letter-spacing: -0.045em;
     margin-bottom: 28px;
+    color: #ffffff;
 }
 
 h2 {
-    font-size: clamp(2rem, 4vw, 3rem);
-    line-height: 1.04;
-    letter-spacing: -0.04em;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.3rem, 4vw, 3.6rem);
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.03em;
     margin-bottom: 20px;
+    color: #ffffff;
 }
 
 p {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    font-size: 1.12rem;
-    color: rgba(248,250,252,0.86);
+    font-size: 1.08rem;
+    color: rgba(248,250,252,0.84);
     margin-bottom: 20px;
 }
 
 .lead {
     max-width: 760px;
     margin: 0 auto 20px;
-    font-size: 1.18rem;
+    font-size: 1.16rem;
+    line-height: 1.75;
+    color: rgba(248,250,252,0.90);
 }
 
 .symptoms {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 14px;
-    margin: 34px 0 44px;
+    margin: 36px 0 46px;
 }
 
 .symptom {
-    background: rgba(255,255,255,0.09);
-    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.10);
     border-radius: 20px;
     padding: 18px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 0.98rem;
+    line-height: 1.55;
     color: rgba(255,255,255,0.92);
-    font-size: 1rem;
 }
 
 .video-wrap {
     width: min(860px, 100%);
     margin: 0 auto;
-    border-radius: 28px;
+    border-radius: 30px;
     overflow: hidden;
-    box-shadow: 0 18px 48px rgba(0,0,0,0.38);
-    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: 0 22px 60px rgba(0,0,0,0.42);
+    border: 1px solid rgba(255,255,255,0.12);
 }
 
 .video {
     position: relative;
     padding-bottom: 56.25%;
     height: 0;
-    background: #0f172a;
+    background: #0b1220;
 }
 
 .video iframe {
@@ -132,34 +145,32 @@ p {
 }
 
 .section {
-    padding: 64px 56px;
-    border-top: 1px solid rgba(255,255,255,0.11);
+    padding: 68px 64px;
+    border-top: 1px solid rgba(255,255,255,0.08);
 }
 
 .small {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    color: rgba(255,255,255,0.68);
-    font-size: 0.98rem;
+    color: rgba(255,255,255,0.62);
+    font-size: 0.96rem;
     margin-bottom: 24px;
 }
 
 .card {
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 26px;
-    padding: 34px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 28px;
+    padding: 38px;
 }
 
 ul {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     padding-left: 22px;
     margin: 22px 0;
 }
 
 li {
     margin-bottom: 14px;
-    color: rgba(255,255,255,0.9);
-    font-size: 1.06rem;
+    color: rgba(255,255,255,0.90);
+    font-size: 1.03rem;
 }
 
 .module-list {
@@ -173,80 +184,77 @@ li {
     grid-template-columns: 110px 1fr auto auto;
     gap: 20px;
     align-items: center;
-    background: rgba(255,255,255,0.085);
-    border: 1px solid rgba(255,255,255,0.14);
+    background: rgba(255,255,255,0.065);
+    border: 1px solid rgba(255,255,255,0.10);
     border-radius: 22px;
-    padding: 20px 22px;
-    transition: transform 0.15s ease, background 0.15s ease;
+    padding: 22px 24px;
+    transition: all 0.18s ease;
 }
 
 .module:hover {
     transform: translateY(-2px);
-    background: rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.09);
 }
 
 .module-number {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     color: #bfdbfe;
-    font-weight: 800;
-    font-size: 0.92rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.03em;
 }
 
 .module-title {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    font-weight: 750;
+    font-weight: 600;
     color: #ffffff;
-    font-size: 1.05rem;
-    line-height: 1.35;
+    font-size: 1.02rem;
+    line-height: 1.45;
 }
 
 .module-time {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    color: rgba(255,255,255,0.65);
-    font-size: 0.94rem;
+    color: rgba(255,255,255,0.58);
+    font-size: 0.92rem;
 }
 
 .module a {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     color: #dbeafe;
     text-decoration: none;
-    font-weight: 800;
+    font-weight: 700;
     white-space: nowrap;
 }
 
 .about-grid {
     display: grid;
     grid-template-columns: 310px 1fr;
-    gap: 44px;
+    gap: 48px;
     align-items: start;
 }
 
 .about-photo {
     width: 100%;
-    border-radius: 28px;
-    border: 1px solid rgba(255,255,255,0.18);
-    box-shadow: 0 18px 45px rgba(0,0,0,0.34);
+    border-radius: 30px;
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 24px 60px rgba(0,0,0,0.36);
 }
 
 .disclaimer {
-    background: rgba(15,23,42,0.36);
-    border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 20px;
-    padding: 22px;
+    background: rgba(10,15,25,0.36);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 22px;
+    padding: 24px;
     margin-top: 28px;
 }
 
 footer {
     text-align: center;
-    padding: 36px 0 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    color: rgba(255,255,255,0.62);
-    font-size: 0.92rem;
+    padding: 40px 0 0;
+    color: rgba(255,255,255,0.50);
+    font-size: 0.9rem;
 }
 
 @media (max-width: 860px) {
 
-    .hero, .section {
+    .hero,
+    .section {
         padding: 42px 24px;
     }
 
@@ -256,7 +264,7 @@ footer {
 
     .module {
         grid-template-columns: 1fr;
-        gap: 8px;
+        gap: 10px;
     }
 
     .about-grid {
@@ -264,7 +272,11 @@ footer {
     }
 
     h1 {
-        font-size: 3rem;
+        font-size: 3.6rem;
+    }
+
+    h2 {
+        font-size: 2.6rem;
     }
 }
 
@@ -274,6 +286,7 @@ footer {
 <body>
 
 <div class="page">
+
 <div class="shell">
 
 <section class="hero">
