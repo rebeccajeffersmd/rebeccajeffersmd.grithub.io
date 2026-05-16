@@ -1,555 +1,418 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Normal Labs, But Still Exhausted? | Dr. Rebecca Jeffers</title>
-  <meta name="description" content="Free physician-created video series explaining persistent fatigue, brain fog, normal labs, sleep timing, cortisol rhythm, thyroid labs, metabolism, and daily energy patterns." />
-  <style>
-    :root {
-      --bg: linear-gradient(135deg, #9bbf94 0%, #2a4b82 100%);
-      --card: #ffffff;
-      --text: #111827;
-      --muted: #52616f;
-      --accent: #2563eb;
-      --accent-dark: #1e40af;
-      --border: #e5e7eb;
-      --soft: #eff6ff;
-      --soft-2: #f1f5f9;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    * {
-      box-sizing: border-box;
-    }
+<title>The Rhythm of Energy | Dr. Rebecca Jeffers</title>
 
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: linear-gradient(135deg, #9bbf94 0%, #2a4b82 100%);
-      color: var(--text);
-      line-height: 1.6;
-      min-height: 100vh;
-    }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    a {
-      color: inherit;
-    }
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: linear-gradient(
+        135deg,
+        #9bbf94 0%,
+        #2a4b82 100%
+    );
+    color: #ffffff;
+    line-height: 1.7;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 60px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 32px;
+    box-shadow: 0 14px 50px rgba(0,0,0,0.20);
+}
+
+header {
+    text-align: center;
+}
+
+.logo {
+    max-width: 220px;
+    width: 100%;
+    margin-bottom: 34px;
+}
+
+h1 {
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    line-height: 1.02;
+    margin-bottom: 28px;
+    letter-spacing: -0.05em;
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 24px;
+    letter-spacing: -0.04em;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-bottom: 14px;
+}
+
+p {
+    font-size: 1.18rem;
+    color: rgba(255,255,255,0.92);
+    margin-bottom: 22px;
+}
+
+.hero-text {
+    max-width: 760px;
+    margin: auto;
+}
+
+.symptoms {
+    margin-top: 34px;
+    margin-bottom: 34px;
+    display: grid;
+    gap: 16px;
+}
+
+.symptom {
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 18px;
+    padding: 18px 20px;
+    font-size: 1.1rem;
+    backdrop-filter: blur(6px);
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 24px;
+    margin-top: 42px;
+    box-shadow: 0 14px 40px rgba(0,0,0,0.28);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.section {
+    margin-top: 90px;
+}
+
+.card {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 24px;
+    padding: 34px;
+    margin-top: 30px;
+}
+
+.small {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.74);
+}
+
+ul {
+    margin-top: 18px;
+    padding-left: 24px;
+}
+
+li {
+    margin-bottom: 16px;
+    font-size: 1.08rem;
+    color: rgba(255,255,255,0.92);
+}
+
+.module-list {
+    display: grid;
+    gap: 18px;
+    margin-top: 34px;
+}
+
+.module {
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 22px;
+    padding: 24px;
+}
+
+.module-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.module-time {
+    color: rgba(255,255,255,0.70);
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 42px;
+    align-items: start;
+}
+
+.about-photo {
+    width: 100%;
+    border-radius: 24px;
+    box-shadow: 0 14px 34px rgba(0,0,0,0.25);
+}
+
+footer {
+    text-align: center;
+    padding: 60px 20px 40px;
+    color: rgba(255,255,255,0.68);
+    font-size: 0.95rem;
+}
+
+@media (max-width: 900px) {
 
     .container {
-      width: min(1080px, 92%);
-      margin: 0 auto;
+        padding: 34px 24px;
+        margin: 18px;
     }
 
-    header {
-      padding: 20px 0;
-      border-bottom: 1px solid var(--border);
-      background: rgba(255, 255, 255, 0.92);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      backdrop-filter: blur(8px);
-    }
-
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
-
-    .logo {
-      height: 42px;
-      width: auto;
-      max-width: 180px;
-      object-fit: contain;
-      display: block;
-    }
-
-    .brand-text {
-      display: inline-block;
-    }
-
-    .nav a {
-      text-decoration: none;
-      font-size: 0.95rem;
-      color: var(--muted);
-      margin-left: 18px;
-    }
-
-    .hero {
-      padding: 74px 0 54px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 42px;
-      align-items: center;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      background: var(--soft);
-      color: var(--accent-dark);
-      border: 1px solid #d4e7e5;
-      padding: 6px 12px;
-      border-radius: 999px;
-      font-weight: 650;
-      font-size: 0.9rem;
-      margin-bottom: 18px;
+    .about-grid {
+        grid-template-columns: 1fr;
     }
 
     h1 {
-      font-size: clamp(2.35rem, 5vw, 4.5rem);
-      line-height: 0.98;
-      letter-spacing: -0.06em;
-      margin: 0 0 22px;
+        font-size: 2.8rem;
     }
 
-    .lead {
-      font-size: clamp(1.08rem, 2vw, 1.35rem);
-      color: var(--muted);
-      max-width: 680px;
-      margin-bottom: 24px;
+    h2 {
+        font-size: 2rem;
     }
 
-    .symptoms {
-      list-style: none;
-      padding: 0;
-      margin: 26px 0;
-      display: grid;
-      gap: 12px;
+    p,
+    li {
+        font-size: 1rem;
     }
-
-    .symptoms li {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 14px 16px;
-      box-shadow: 0 8px 24px rgba(31, 41, 51, 0.04);
-    }
-
-    .cta-row {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      align-items: center;
-      margin-top: 28px;
-    }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--accent);
-      color: white;
-      text-decoration: none;
-      font-weight: 750;
-      padding: 14px 20px;
-      border-radius: 14px;
-      box-shadow: 0 10px 24px rgba(47, 111, 115, 0.22);
-      transition: transform 0.15s ease, background 0.15s ease;
-    }
-
-    .button:hover {
-      background: var(--accent-dark);
-      transform: translateY(-1px);
-    }
-
-    .secondary-link {
-      color: var(--accent-dark);
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-    .video-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 16px;
-      box-shadow: 0 16px 44px rgba(31, 41, 51, 0.08);
-    }
-
-    .welcome-video {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      border: 0;
-      border-radius: 18px;
-      display: block;
-      background: var(--soft-2);
-    }
-
-    .video-caption {
-      margin: 12px 4px 0;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .video-placeholder strong {
-      color: var(--accent-dark);
-      display: block;
-      font-size: 1.1rem;
-      margin-bottom: 8px;
-    }
-
-    section {
-      padding: 58px 0;
-    }
-
-    .section-title {
-      font-size: clamp(1.9rem, 3vw, 2.8rem);
-      line-height: 1.05;
-      letter-spacing: -0.045em;
-      margin: 0 0 18px;
-    }
-
-    .section-intro {
-      color: var(--muted);
-      font-size: 1.1rem;
-      max-width: 780px;
-      margin-bottom: 28px;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      padding: 22px;
-      box-shadow: 0 8px 24px rgba(31, 41, 51, 0.04);
-    }
-
-    .card h3 {
-      margin: 0 0 10px;
-      font-size: 1.15rem;
-      line-height: 1.25;
-    }
-
-    .card p {
-      margin: 0;
-      color: var(--muted);
-    }
-
-    .modules {
-      display: grid;
-      gap: 14px;
-      margin-top: 28px;
-    }
-
-    .module {
-      display: grid;
-      grid-template-columns: 96px 1fr;
-      gap: 18px;
-      align-items: start;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 18px;
-    }
-
-    .module-number {
-      background: var(--soft);
-      color: var(--accent-dark);
-      border-radius: 14px;
-      padding: 12px;
-      text-align: center;
-      font-weight: 800;
-      line-height: 1.25;
-    }
-
-    .module-number span {
-      font-size: 0.8rem;
-      font-weight: 700;
-      color: var(--muted);
-    }
-
-    .module h3 {
-      margin: 0 0 6px;
-    }
-
-    .module p {
-      margin: 0 0 12px;
-      color: var(--muted);
-    }
-
-    .module a {
-      color: var(--accent-dark);
-      font-weight: 750;
-      text-decoration: none;
-    }
-
-    .note {
-      background: #f8fafc;
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 22px;
-      color: var(--muted);
-      margin-top: 26px;
-    }
-
-    .about {
-      display: grid;
-      grid-template-columns: 0.75fr 1.25fr;
-      gap: 28px;
-      align-items: start;
-    }
-
-    .portrait-placeholder {
-      min-height: 260px;
-      border-radius: 24px;
-      background: linear-gradient(135deg, #eff6ff, #ffffff);
-      border: 1px solid var(--border);
-      display: grid;
-      place-items: center;
-      color: var(--muted);
-      text-align: center;
-      padding: 20px;
-    }
-
-    footer {
-      padding: 34px 0;
-      color: var(--muted);
-      border-top: 1px solid var(--border);
-      font-size: 0.92rem;
-    }
-
-    @media (max-width: 860px) {
-      .hero-grid, .about {
-        grid-template-columns: 1fr;
-      }
-
-      .cards {
-        grid-template-columns: 1fr;
-      }
-
-      .module {
-        grid-template-columns: 1fr;
-      }
-
-      .nav-links {
-        display: none;
-      }
-
-      .hero {
-        padding-top: 48px;
-      }
-    }
-  </style>
+}
+</style>
 </head>
+
 <body>
-  <header>
-    <div class="container nav">
-      <div class="brand">
-        <!-- Replace logo.png with your actual logo file name after uploading it to GitHub -->
-        <img src="logo.png" alt="Dr. Rebecca Jeffers logo" class="logo" />
-        <span class="brand-text">Dr. Rebecca Jeffers</span>
-      </div>
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="#start">Start Here</a>
-        <a href="#videos">Free Videos</a>
-        <a href="#about">About</a>
-      </nav>
-    </div>
-  </header>
 
-  <main>
-    <section class="hero" id="start">
-      <div class="container hero-grid">
-        <div>
-          <span class="eyebrow">Free physician-created video series</span>
-          <h1>Normal labs, but still exhausted?</h1>
-          <p class="lead">You’ve tried sleeping more. Eating better. Managing stress. But nothing really works — and no one can fully explain why.</p>
+<div class="container">
 
-          <ul class="symptoms">
-            <li>You wake up exhausted — even after a full night of sleep.</li>
-            <li>Your energy crashes in the afternoon.</li>
-            <li>You feel wired at night but still wake up unrefreshed.</li>
-          </ul>
+<header>
 
-          <p class="lead">This free series explains what often gets missed: how sleep timing, stress rhythm, thyroid labs, nutrition, and movement interact across the day.</p>
+<img 
+    src="https://i.imgur.com/0m9i2mY.png" 
+    alt="The Rhythm of Energy Logo"
+    class="logo"
+>
 
-          <div class="cta-row">
-            <a class="button" href="#videos">Watch the Free Series</a>
-            <a class="secondary-link" href="#about">About Dr. Jeffers</a>
-          </div>
-        </div>
+<div class="hero-text">
 
-        <div class="video-card">
-          <!-- Replace the iframe src with your YouTube welcome video embed URL.
-               Example format: https://www.youtube.com/embed/VIDEO_ID -->
-          <iframe
-            class="welcome-video"
-            src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-            title="Welcome video from Dr. Rebecca Jeffers"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
-          <p class="video-caption">Start here: a short welcome video explaining what this series covers.</p>
-        </div>
-      </div>
-    </section>
+<h1>Normal Labs, But Still Exhausted?</h1>
 
-    <section>
-      <div class="container">
-        <h2 class="section-title">Why common advice often falls short</h2>
-        <p class="section-intro">Most people are given pieces of the puzzle — sleep, stress, diet, labs — but not how they actually fit together. That missing connection is often why symptoms continue even when labs look “normal.”</p>
+<p>
+You wake up exhausted—even after a full night of sleep.<br>
+Your energy crashes in the afternoon.<br>
+You feel wired at night but still wake up unrefreshed.
+</p>
 
-        <div class="cards">
-          <div class="card">
-            <h3>Timing matters</h3>
-            <p>Energy is not just about levels on a lab report. It is also about when signals happen across the day.</p>
-          </div>
-          <div class="card">
-            <h3>Systems interact</h3>
-            <p>Sleep, stress, food, hormones, and movement do not work separately. They influence each other constantly.</p>
-          </div>
-          <div class="card">
-            <h3>Patterns explain more</h3>
-            <p>Morning fatigue, afternoon crashes, and feeling wired at night often make more sense when viewed as patterns.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+<p>
+You’ve tried sleeping more. Eating better. Managing stress.<br>
+But nothing really works—and no one can fully explain why.
+</p>
 
-    <section id="videos">
-      <div class="container">
-        <h2 class="section-title">Watch the free video series</h2>
-        <p class="section-intro">Created by Rebecca Jeffers, MD — a board-certified endocrinologist. These videos cover what there is rarely time to fully explain in a typical appointment.</p>
+</div>
 
-        <div class="modules">
-          <article class="module">
-            <div class="module-number">Intro<br><span>1:34</span></div>
-            <div>
-              <h3>Introduction</h3>
-              <p>Start here: what this series covers and how to use it.</p>
-              <a href="YOUR_YOUTUBE_LINK_INTRO" target="_blank" rel="noopener">Watch video →</a>
-            </div>
-          </article>
+<div class="symptoms">
 
-          <article class="module">
-            <div class="module-number">Module 1<br><span>6:24</span></div>
-            <div>
-              <h3>Energy & Fatigue — Understanding Your Body's Signals</h3>
-              <p>Why fatigue is not just “being tired” and how your body sends signals across the day.</p>
-              <a href="YOUR_YOUTUBE_LINK_MODULE_1" target="_blank" rel="noopener">Watch video →</a>
-            </div>
-          </article>
+<div class="symptom">
+Morning fatigue that doesn’t match your sleep
+</div>
 
-          <article class="module">
-            <div class="module-number">Module 2<br><span>4:00</span></div>
-            <div>
-              <h3>Lab Literacy — What “Normal” Really Means</h3>
-              <p>How to understand normal lab ranges, what they can show, and what they may not fully explain.</p>
-              <a href="YOUR_YOUTUBE_LINK_MODULE_2" target="_blank" rel="noopener">Watch video →</a>
-            </div>
-          </article>
+<div class="symptom">
+Afternoon crashes that feel out of proportion to your day
+</div>
 
-          <article class="module">
-            <div class="module-number">Module 3<br><span>5:25</span></div>
-            <div>
-              <h3>Thyroid — What it Does and What it Doesn't Explain</h3>
-              <p>What thyroid hormones do, how thyroid labs are interpreted, and why thyroid is only one part of the picture.</p>
-              <a href="YOUR_YOUTUBE_LINK_MODULE_3" target="_blank" rel="noopener">Watch video →</a>
-            </div>
-          </article>
+<div class="symptom">
+Feeling tired all day but alert at night
+</div>
 
-          <article class="module">
-            <div class="module-number">Module 4<br><span>6:44</span></div>
-            <div>
-              <h3>The Autonomic Nervous System and the Hypothalamic–Pituitary–Adrenal Axis</h3>
-              <p>How stress signaling, cortisol rhythm, and nervous system state influence energy and recovery.</p>
-              <a href="YOUR_YOUTUBE_LINK_MODULE_4" target="_blank" rel="noopener">Watch video →</a>
-            </div>
-          </article>
+</div>
 
-          <article class="module">
-            <div class="module-number">Module 5<br><span>10:55</span></div>
-            <div>
-              <h3>Sleep and Circadian Rhythm — Training Your 24-Hour Energy Clock</h3>
-              <p>Why sleep timing, light exposure, rhythm, and consistency matter for daily energy.</p>
-              <a href="YOUR_YOUTUBE_LINK_MODULE_5" target="_blank" rel="noopener">Watch video →</a>
-            </div>
-          </article>
+<div class="video-wrapper">
 
-          <article class="module">
-            <div class="module-number">Module 6<br><span>16:06</span></div>
-            <div>
-              <h3>Nutrition and Metabolic Stability — How Food, Timing, and Appetite Signals Shape Your Energy</h3>
-              <p>How meal timing, food composition, appetite signals, and metabolic stability affect focus and crashes.</p>
-              <a href="YOUR_YOUTUBE_LINK_MODULE_6" target="_blank" rel="noopener">Watch video →</a>
-            </div>
-          </article>
+<iframe
+src="https://www.youtube.com/embed/syiMPGoUdGA"
+title="Welcome Video"
+frameborder="0"
+allowfullscreen>
+</iframe>
 
-          <article class="module">
-            <div class="module-number">Module 7<br><span>7:24</span></div>
-            <div>
-              <h3>Movement, Muscle, and Metabolic Efficiency</h3>
-              <p>The difference between structured exercise and frequent daily movement, and why timing matters.</p>
-              <a href="YOUR_YOUTUBE_LINK_MODULE_7" target="_blank" rel="noopener">Watch video →</a>
-            </div>
-          </article>
+</div>
 
-          <article class="module">
-            <div class="module-number">Module 8<br><span>6:10</span></div>
-            <div>
-              <h3>Integration — Making Sense of Your Energy Patterns</h3>
-              <p>How the pieces fit together so you can better understand your own day-to-day energy pattern.</p>
-              <a href="YOUR_YOUTUBE_LINK_MODULE_8" target="_blank" rel="noopener">Watch video →</a>
-            </div>
-          </article>
+</header>
 
-          <article class="module">
-            <div class="module-number">Outro<br><span>0:47</span></div>
-            <div>
-              <h3>Outro</h3>
-              <p>Final thoughts and how to use what you learned going forward.</p>
-              <a href="YOUR_YOUTUBE_LINK_OUTRO" target="_blank" rel="noopener">Watch video →</a>
-            </div>
-          </article>
-        </div>
+<section class="section">
 
-        <div class="note">
-          <strong>Medical note:</strong> This free series is educational and does not diagnose, treat, or replace medical care. Persistent or worsening symptoms should be discussed with your clinician.
-        </div>
-      </div>
-    </section>
+<h2>What This Series Covers</h2>
 
-    <section id="about">
-      <div class="container about">
-        <div class="portrait-placeholder">
-          Add a professional photo here if you want.
-        </div>
-        <div>
-          <h2 class="section-title">About Dr. Rebecca Jeffers</h2>
-          <p class="section-intro">I’m a board-certified endocrinologist who works with patients whose symptoms do not always match their lab results. I created this free series to explain the patterns that are often too complex to fully cover in a standard visit.</p>
-          <p class="section-intro">The goal is not to give generic advice or quick fixes. It is to help you understand what may actually be shaping your energy — so you can have clearer conversations and make more informed next steps.</p>
-        </div>
-      </div>
-    </section>
-  </main>
+<p class="small">
+Created by Rebecca Jeffers, MD — Board-Certified Endocrinologist
+</p>
 
-  <footer>
-    <div class="container">
-      © <span id="year"></span> Rebecca Jeffers, MD. Educational content only. Not medical advice.
-    </div>
-  </footer>
+<div class="card">
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+<p>
+This free educational series explains the physiology behind persistent fatigue when labs appear “normal.”
+</p>
+
+<p>
+Most people are given pieces of the puzzle—sleep, stress, diet, hormones—but not how those systems actually interact across the day.
+</p>
+
+<p>
+That missing connection is often why symptoms continue even when nothing obvious appears “wrong.”
+</p>
+
+<ul>
+<li>How daily cortisol rhythm shapes energy from morning through night</li>
+
+<li>What “normal” thyroid labs do—and don’t—tell you</li>
+
+<li>Why sleep timing matters just as much as sleep duration</li>
+
+<li>How food timing and composition affect focus, cravings, and crashes</li>
+
+<li>How movement timing influences metabolic efficiency and energy</li>
+</ul>
+
+<p>
+The goal is not quick fixes or hype—it’s helping you better understand what may actually be driving how you feel.
+</p>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Free Video Modules</h2>
+
+<div class="module-list">
+
+<div class="module">
+<div class="module-title">Introduction</div>
+<div class="module-time">1:34</div>
+</div>
+
+<div class="module">
+<div class="module-title">Module 1 — Energy & Fatigue: Understanding Your Body's Signals</div>
+<div class="module-time">6:24</div>
+</div>
+
+<div class="module">
+<div class="module-title">Module 2 — Lab Literacy: What “Normal” Really Means</div>
+<div class="module-time">4:00</div>
+</div>
+
+<div class="module">
+<div class="module-title">Module 3 — Thyroid: What it Does and What it Doesn't Explain</div>
+<div class="module-time">5:25</div>
+</div>
+
+<div class="module">
+<div class="module-title">Module 4 — The Autonomic Nervous System and the HPA Axis</div>
+<div class="module-time">6:44</div>
+</div>
+
+<div class="module">
+<div class="module-title">Module 5 — Sleep and Circadian Rhythm</div>
+<div class="module-time">10:55</div>
+</div>
+
+<div class="module">
+<div class="module-title">Module 6 — Nutrition and Metabolic Stability</div>
+<div class="module-time">16:06</div>
+</div>
+
+<div class="module">
+<div class="module-title">Module 7 — Movement, Muscle, and Metabolic Efficiency</div>
+<div class="module-time">7:24</div>
+</div>
+
+<div class="module">
+<div class="module-title">Module 8 — Integration: Making Sense of Your Energy Patterns</div>
+<div class="module-time">6:10</div>
+</div>
+
+<div class="module">
+<div class="module-title">Outro</div>
+<div class="module-time">0:47</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>About Dr. Rebecca Jeffers</h2>
+
+<div class="about-grid">
+
+<div>
+<img
+src="https://i.imgur.com/y8M0n5x.jpeg"
+alt="Rebecca Jeffers MD"
+class="about-photo"
+>
+</div>
+
+<div>
+
+<p>
+I’m a board-certified endocrinologist who works with patients whose symptoms often don’t match their lab results.
+</p>
+
+<p>
+I created this series because there’s rarely enough time in a standard visit to fully explain how sleep, stress physiology, metabolism, hormones, and daily rhythms interact.
+</p>
+
+<p>
+The goal is not to diagnose or replace medical care. It’s to provide a clearer understanding of the patterns that may be affecting how you feel day to day.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+<footer>
+
+© The Rhythm of Energy — Educational Content Only
+
+</footer>
+
 </body>
 </html>
