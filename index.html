@@ -1,40 +1,758 @@
-<!-- ========================= -->
-<!-- ORIENTATION VIDEO SECTION -->
-<!-- ========================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<section class="orientation-section">
-  <div class="container">
+  <title>The Rhythm of Energy</title>
 
-    <div class="section-header">
-      <h2>Why You Still Feel Exhausted Despite “Normal” Labs</h2>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-      <p class="section-subtext">
-        This short orientation explains why fatigue, brain fog, and energy crashes can persist even when standard labs appear normal — and how sleep, metabolism, stress physiology, and daily rhythms interact to shape how you feel.
-      </p>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+
+      background:
+        radial-gradient(circle at top left,
+          rgba(182, 215, 185, 0.45),
+          transparent 35%),
+        linear-gradient(
+          90deg,
+          #35546a 0%,
+          #24476b 45%,
+          #0c2342 100%
+        );
+
+      color: #f4f1ea;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: 0 auto;
+    }
+
+    section {
+      padding: 110px 0;
+    }
+
+    /* ========================= */
+    /* HERO */
+    /* ========================= */
+
+    .hero {
+      padding-top: 70px;
+      padding-bottom: 90px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 420px 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .hero-logo {
+      width: 240px;
+      margin-bottom: 42px;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.68);
+      margin-bottom: 22px;
+      font-weight: 600;
+    }
+
+    .hero h1 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(68px, 8vw, 118px);
+      line-height: 0.9;
+      font-weight: 500;
+      margin-bottom: 34px;
+      letter-spacing: -2px;
+    }
+
+    .hero-subtext {
+      max-width: 760px;
+
+      font-size: 1.45rem;
+      line-height: 1.85;
+      color: rgba(255,255,255,0.82);
+
+      margin-bottom: 44px;
+    }
+
+    .symptom-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .symptom-card {
+      padding: 24px;
+      border-radius: 20px;
+
+      background: rgba(255,255,255,0.04);
+
+      border: 1px solid rgba(255,255,255,0.06);
+
+      color: rgba(255,255,255,0.88);
+
+      font-size: 1.02rem;
+      line-height: 1.6;
+    }
+
+    /* ========================= */
+    /* ORIENTATION */
+    /* ========================= */
+
+    .orientation-section {
+      border-top: 1px solid rgba(255,255,255,0.05);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 54px;
+    }
+
+    .section-header h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(52px, 6vw, 82px);
+      line-height: 0.95;
+      font-weight: 500;
+      margin-bottom: 26px;
+    }
+
+    .section-header p {
+      max-width: 860px;
+      margin: 0 auto;
+
+      font-size: 1.25rem;
+      line-height: 1.8;
+
+      color: rgba(255,255,255,0.78);
+    }
+
+    .orientation-card {
+      max-width: 780px;
+      margin: 0 auto;
+
+      padding: 60px 48px;
+
+      border-radius: 32px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(8,25,45,0.96),
+          rgba(5,18,38,0.98)
+        );
+
+      border: 1px solid rgba(255,255,255,0.08);
+
+      box-shadow:
+        0 25px 70px rgba(0,0,0,0.25);
+
+      text-align: center;
+    }
+
+    .orientation-logo {
+      width: 140px;
+      margin: 0 auto 34px;
+    }
+
+    .orientation-title {
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: clamp(44px, 5vw, 68px);
+
+      line-height: 1.02;
+
+      margin-bottom: 34px;
+    }
+
+    .orientation-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+
+      padding: 18px 34px;
+
+      border-radius: 999px;
+
+      border: 1px solid rgba(255,255,255,0.14);
+
+      background: rgba(255,255,255,0.05);
+
+      color: white;
+
+      font-size: 1.05rem;
+      font-weight: 600;
+
+      cursor: pointer;
+
+      transition: all 0.2s ease;
+    }
+
+    .orientation-button:hover {
+      transform: translateY(-2px);
+
+      background: rgba(255,255,255,0.1);
+    }
+
+    /* ========================= */
+    /* COURSE ROADMAP */
+    /* ========================= */
+
+    .roadmap-header {
+      margin-bottom: 48px;
+    }
+
+    .roadmap-header h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(48px, 5vw, 76px);
+      margin-bottom: 18px;
+    }
+
+    .roadmap-header p {
+      max-width: 780px;
+
+      color: rgba(255,255,255,0.78);
+
+      font-size: 1.18rem;
+      line-height: 1.8;
+    }
+
+    .module-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .module-card {
+      display: grid;
+      grid-template-columns: 140px 1fr 80px 120px;
+
+      align-items: center;
+
+      gap: 18px;
+
+      padding: 28px 30px;
+
+      border-radius: 22px;
+
+      background: rgba(255,255,255,0.045);
+
+      border: 1px solid rgba(255,255,255,0.05);
+
+      transition: all 0.2s ease;
+    }
+
+    .module-card:hover {
+      transform: translateY(-2px);
+
+      background: rgba(255,255,255,0.07);
+    }
+
+    .module-number {
+      color: rgba(255,255,255,0.6);
+      font-weight: 600;
+    }
+
+    .module-title {
+      font-size: 1.18rem;
+      line-height: 1.5;
+      font-weight: 500;
+    }
+
+    .module-time {
+      color: rgba(255,255,255,0.6);
+    }
+
+    .module-link {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* ========================= */
+    /* WHAT THIS SERIES COVERS */
+    /* ========================= */
+
+    .covers-section {
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .covers-card {
+      max-width: 900px;
+
+      margin: 0 auto;
+
+      padding: 56px;
+
+      border-radius: 28px;
+
+      background: rgba(255,255,255,0.05);
+
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .covers-card p {
+      font-size: 1.18rem;
+      line-height: 1.9;
+      color: rgba(255,255,255,0.84);
+
+      margin-bottom: 28px;
+    }
+
+    .covers-card ul {
+      padding-left: 24px;
+      margin-bottom: 28px;
+    }
+
+    .covers-card li {
+      margin-bottom: 18px;
+
+      font-size: 1.12rem;
+      line-height: 1.7;
+
+      color: rgba(255,255,255,0.82);
+    }
+
+    /* ========================= */
+    /* ABOUT */
+    /* ========================= */
+
+    .about-section {
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .about-image {
+      border-radius: 28px;
+      overflow: hidden;
+    }
+
+    .about-content h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(54px, 6vw, 88px);
+      line-height: 0.95;
+      margin-bottom: 34px;
+    }
+
+    .about-content p {
+      font-size: 1.24rem;
+      line-height: 1.9;
+      color: rgba(255,255,255,0.82);
+
+      margin-bottom: 28px;
+    }
+
+    .medical-note {
+      margin-top: 36px;
+
+      padding: 28px;
+
+      border-radius: 22px;
+
+      background: rgba(5,18,38,0.45);
+
+      border: 1px solid rgba(255,255,255,0.06);
+
+      font-size: 1rem;
+      line-height: 1.8;
+
+      color: rgba(255,255,255,0.75);
+    }
+
+    /* ========================= */
+    /* FOOTER */
+    /* ========================= */
+
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.06);
+
+      padding: 40px 0 60px;
+
+      text-align: center;
+
+      color: rgba(255,255,255,0.55);
+
+      font-size: 0.95rem;
+    }
+
+    /* ========================= */
+    /* MOBILE */
+    /* ========================= */
+
+    @media (max-width: 900px) {
+
+      section {
+        padding: 90px 0;
+      }
+
+      .hero-grid,
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .symptom-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .module-card {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .hero h1 {
+        font-size: 72px;
+      }
+
+      .orientation-card,
+      .covers-card {
+        padding: 38px 28px;
+      }
+
+      .section-header h2 {
+        font-size: 56px;
+      }
+
+      .orientation-title {
+        font-size: 52px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ========================= -->
+  <!-- HERO -->
+  <!-- ========================= -->
+
+  <section class="hero">
+
+    <div class="container">
+
+      <div class="hero-grid">
+
+        <div>
+          <img
+            src="images/rhythm-logo.png"
+            alt="The Rhythm of Energy"
+            class="hero-logo"
+          />
+        </div>
+
+        <div>
+
+          <div class="eyebrow">
+            Evidence-Based Endocrinology Education
+          </div>
+
+          <h1>
+            Normal Labs.<br />
+            Still Exhausted.
+          </h1>
+
+          <p class="hero-subtext">
+            A free physician-created video series explaining why fatigue, brain fog, and energy crashes can continue even when routine labs look normal.
+          </p>
+
+          <div class="symptom-grid">
+
+            <div class="symptom-card">
+              Wake up exhausted even after a full night of sleep
+            </div>
+
+            <div class="symptom-card">
+              Notice energy crashes during the afternoon
+            </div>
+
+            <div class="symptom-card">
+              Feel wired at night but unrefreshed in the morning
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
 
-    <div class="orientation-video-card">
+  </section>
 
-      <div class="video-logo-wrap">
+  <!-- ========================= -->
+  <!-- ORIENTATION -->
+  <!-- ========================= -->
+
+  <section class="orientation-section">
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <h2>
+          Why You Still Feel Exhausted Despite “Normal” Labs
+        </h2>
+
+        <p>
+          This short orientation explains why fatigue, brain fog, and energy crashes can persist even when standard labs appear normal — and how sleep, metabolism, stress physiology, and daily rhythms interact to shape how you feel.
+        </p>
+
+      </div>
+
+      <div class="orientation-card">
+
         <img
           src="images/rhythm-logo.png"
           alt="The Rhythm of Energy"
-          class="video-logo"
+          class="orientation-logo"
         />
+
+        <div class="orientation-title">
+          Why Normal Labs Don’t Always Mean Normal Function
+        </div>
+
+        <button
+          class="orientation-button"
+          onclick="openWelcomeVideo()"
+        >
+          ▶ See the framework
+        </button>
+
       </div>
 
-      <h3 class="video-card-title">
-        Why Normal Labs Don’t Always Mean Normal Function
-      </h3>
+    </div>
 
-      <button
-        class="orientation-button"
-        onclick="openWelcomeVideo()"
-      >
-        <span class="play-icon">▶</span>
-        See the framework
-      </button>
+  </section>
+
+  <!-- ========================= -->
+  <!-- ROADMAP -->
+  <!-- ========================= -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="roadmap-header">
+
+        <h2>Course Roadmap</h2>
+
+        <p>
+          Each module builds on the previous one, gradually connecting how sleep, stress physiology, metabolism, hormones, and daily rhythms interact across the day.
+        </p>
+
+      </div>
+
+      <div class="module-list">
+
+        <div class="module-card">
+          <div class="module-number">Intro</div>
+          <div class="module-title">Introduction</div>
+          <div class="module-time">1:34</div>
+          <a href="#" class="module-link">Watch →</a>
+        </div>
+
+        <div class="module-card">
+          <div class="module-number">Module 1</div>
+          <div class="module-title">
+            Energy & Fatigue — Understanding Your Body’s Signals
+          </div>
+          <div class="module-time">6:24</div>
+          <a href="#" class="module-link">Watch →</a>
+        </div>
+
+        <div class="module-card">
+          <div class="module-number">Module 2</div>
+          <div class="module-title">
+            Lab Literacy — What “Normal” Really Means
+          </div>
+          <div class="module-time">4:00</div>
+          <a href="#" class="module-link">Watch →</a>
+        </div>
+
+        <div class="module-card">
+          <div class="module-number">Module 3</div>
+          <div class="module-title">
+            Thyroid — What It Does and What It Doesn't Explain
+          </div>
+          <div class="module-time">5:25</div>
+          <a href="#" class="module-link">Watch →</a>
+        </div>
+
+      </div>
 
     </div>
-  </div>
-</section>
+
+  </section>
+
+  <!-- ========================= -->
+  <!-- WHAT THIS SERIES COVERS -->
+  <!-- ========================= -->
+
+  <section class="covers-section">
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <h2>What This Series Covers</h2>
+
+      </div>
+
+      <div class="covers-card">
+
+        <p>
+          This free educational series explains the physiology behind persistent fatigue when labs appear “normal.”
+        </p>
+
+        <p>
+          Most people are given isolated pieces of the puzzle — sleep, stress, diet, hormones — without understanding how those systems interact across the day.
+        </p>
+
+        <ul>
+
+          <li>
+            How daily cortisol rhythm shapes energy from morning through night
+          </li>
+
+          <li>
+            What “normal” thyroid labs do — and do not — tell you
+          </li>
+
+          <li>
+            Why sleep quality matters just as much as sleep duration
+          </li>
+
+          <li>
+            How food timing and composition affect focus, cravings, and crashes
+          </li>
+
+          <li>
+            How movement timing influences metabolic efficiency and energy
+          </li>
+
+        </ul>
+
+        <p>
+          The goal is not quick fixes or hype. It is to help you better understand what may actually be driving how you feel.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ========================= -->
+  <!-- ABOUT -->
+  <!-- ========================= -->
+
+  <section class="about-section">
+
+    <div class="container">
+
+      <div class="about-grid">
+
+        <div class="about-image">
+
+          <img
+            src="images/rebecca-jeffers.jpg"
+            alt="Dr. Rebecca Jeffers"
+          />
+
+        </div>
+
+        <div class="about-content">
+
+          <div class="eyebrow">
+            About the Physician
+          </div>
+
+          <h2>
+            Rebecca Jeffers, MD
+          </h2>
+
+          <p>
+            I’m a board-certified endocrinologist who works with patients whose symptoms often do not match their lab results.
+          </p>
+
+          <p>
+            I created this series because there is rarely enough time in a standard visit to fully explain how sleep, stress physiology, metabolism, hormones, and daily rhythms interact.
+          </p>
+
+          <p>
+            The goal is not to diagnose or replace medical care. It is to provide a clearer understanding of the patterns that may be affecting how you feel day to day.
+          </p>
+
+          <div class="medical-note">
+
+            <strong>Medical note:</strong>
+            This content is educational and is not medical advice. Persistent or worsening symptoms should be discussed with your clinician.
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ========================= -->
+  <!-- FOOTER -->
+  <!-- ========================= -->
+
+  <footer>
+
+    <div class="container">
+      © Rebecca Jeffers, MD · The Rhythm of Energy
+    </div>
+
+  </footer>
+
+  <script>
+
+    function openWelcomeVideo() {
+
+      window.open(
+        "https://www.youtube.com/watch?v=YOUR_VIDEO_ID",
+        "_blank"
+      );
+
+    }
+
+  </script>
+
+</body>
+</html>
