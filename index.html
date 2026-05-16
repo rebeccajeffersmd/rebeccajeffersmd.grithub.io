@@ -1,46 +1,474 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Evidence-Based Endocrinology Education</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Normal Labs, But Still Exhausted? | Dr. Rebecca Jeffers</title>
+  <meta name="description" content="Free physician-created video series explaining persistent fatigue, brain fog, normal labs, sleep timing, cortisol rhythm, thyroid labs, metabolism, and daily energy patterns." />
   <style>
+    :root {
+      --bg: #f7f4ee;
+      --card: #ffffff;
+      --text: #1f2933;
+      --muted: #5f6b76;
+      --accent: #2f6f73;
+      --accent-dark: #24565a;
+      --border: #e5ded3;
+      --soft: #eef7f6;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
       line-height: 1.6;
     }
 
-    h1 {
-      color: #222;
+    a {
+      color: inherit;
     }
 
-    .video {
-      margin-top: 40px;
+    .container {
+      width: min(1080px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+      background: rgba(247, 244, 238, 0.92);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(8px);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .nav a {
+      text-decoration: none;
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-left: 18px;
+    }
+
+    .hero {
+      padding: 74px 0 54px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: var(--soft);
+      color: var(--accent-dark);
+      border: 1px solid #d4e7e5;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-weight: 650;
+      font-size: 0.9rem;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(2.35rem, 5vw, 4.5rem);
+      line-height: 0.98;
+      letter-spacing: -0.06em;
+      margin: 0 0 22px;
+    }
+
+    .lead {
+      font-size: clamp(1.08rem, 2vw, 1.35rem);
+      color: var(--muted);
+      max-width: 680px;
+      margin-bottom: 24px;
+    }
+
+    .symptoms {
+      list-style: none;
+      padding: 0;
+      margin: 26px 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .symptoms li {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 14px 16px;
+      box-shadow: 0 8px 24px rgba(31, 41, 51, 0.04);
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      font-weight: 750;
+      padding: 14px 20px;
+      border-radius: 14px;
+      box-shadow: 0 10px 24px rgba(47, 111, 115, 0.22);
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+
+    .button:hover {
+      background: var(--accent-dark);
+      transform: translateY(-1px);
+    }
+
+    .secondary-link {
+      color: var(--accent-dark);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .video-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 16px;
+      box-shadow: 0 16px 44px rgba(31, 41, 51, 0.08);
+    }
+
+    .video-placeholder {
+      aspect-ratio: 16 / 9;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #e8f4f3, #fbfaf7);
+      border: 1px dashed #b7d4d2;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 24px;
+      color: var(--muted);
+    }
+
+    .video-placeholder strong {
+      color: var(--accent-dark);
+      display: block;
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+
+    section {
+      padding: 58px 0;
+    }
+
+    .section-title {
+      font-size: clamp(1.9rem, 3vw, 2.8rem);
+      line-height: 1.05;
+      letter-spacing: -0.045em;
+      margin: 0 0 18px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      font-size: 1.1rem;
+      max-width: 780px;
+      margin-bottom: 28px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 22px;
+      box-shadow: 0 8px 24px rgba(31, 41, 51, 0.04);
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 1.15rem;
+      line-height: 1.25;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .modules {
+      display: grid;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .module {
+      display: grid;
+      grid-template-columns: 96px 1fr;
+      gap: 18px;
+      align-items: start;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 18px;
+    }
+
+    .module-number {
+      background: var(--soft);
+      color: var(--accent-dark);
+      border-radius: 14px;
+      padding: 12px;
+      text-align: center;
+      font-weight: 800;
+    }
+
+    .module h3 {
+      margin: 0 0 6px;
+    }
+
+    .module p {
+      margin: 0 0 12px;
+      color: var(--muted);
+    }
+
+    .module a {
+      color: var(--accent-dark);
+      font-weight: 750;
+      text-decoration: none;
+    }
+
+    .note {
+      background: #fff8ea;
+      border: 1px solid #f0dfb9;
+      border-radius: 20px;
+      padding: 22px;
+      color: #66542d;
+      margin-top: 26px;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 0.75fr 1.25fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .portrait-placeholder {
+      min-height: 260px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, #dceceb, #fff);
+      border: 1px solid var(--border);
+      display: grid;
+      place-items: center;
+      color: var(--muted);
+      text-align: center;
+      padding: 20px;
+    }
+
+    footer {
+      padding: 34px 0;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid, .about {
+        grid-template-columns: 1fr;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .module {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 48px;
+      }
     }
   </style>
 </head>
-
 <body>
+  <header>
+    <div class="container nav">
+      <div class="brand">Dr. Rebecca Jeffers</div>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#start">Start Here</a>
+        <a href="#videos">Free Videos</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+  </header>
 
-<h1>Evidence-Based Endocrinology Education</h1>
+  <main>
+    <section class="hero" id="start">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Free physician-created video series</span>
+          <h1>Normal labs, but still exhausted?</h1>
+          <p class="lead">You’ve tried sleeping more. Eating better. Managing stress. But nothing really works — and no one can fully explain why.</p>
 
-<p>
-Clear, practical explanations of metabolism, insulin resistance,
-obesity medicine, thyroid disease, PCOS, and related conditions.
-</p>
+          <ul class="symptoms">
+            <li>You wake up exhausted — even after a full night of sleep.</li>
+            <li>Your energy crashes in the afternoon.</li>
+            <li>You feel wired at night but still wake up unrefreshed.</li>
+          </ul>
 
-<h2>Featured Videos</h2>
+          <p class="lead">This free series explains what often gets missed: how sleep timing, stress rhythm, thyroid labs, nutrition, and movement interact across the day.</p>
 
-<div class="video">
-  <h3>Understanding Insulin Resistance</h3>
+          <div class="cta-row">
+            <a class="button" href="#videos">Watch the Free Series</a>
+            <a class="secondary-link" href="#about">About Dr. Jeffers</a>
+          </div>
+        </div>
 
-  <iframe width="100%" height="450"
-    src="https://www.youtube.com/embed/VIDEO_ID"
-    frameborder="0"
-    allowfullscreen>
-  </iframe>
-</div>
+        <div class="video-card">
+          <div class="video-placeholder">
+            <div>
+              <strong>Embed your intro video here</strong>
+              Replace this box with your YouTube embed code.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section>
+      <div class="container">
+        <h2 class="section-title">Why common advice often falls short</h2>
+        <p class="section-intro">Most people are given pieces of the puzzle — sleep, stress, diet, labs — but not how they actually fit together. That missing connection is often why symptoms continue even when labs look “normal.”</p>
+
+        <div class="cards">
+          <div class="card">
+            <h3>Timing matters</h3>
+            <p>Energy is not just about levels on a lab report. It is also about when signals happen across the day.</p>
+          </div>
+          <div class="card">
+            <h3>Systems interact</h3>
+            <p>Sleep, stress, food, hormones, and movement do not work separately. They influence each other constantly.</p>
+          </div>
+          <div class="card">
+            <h3>Patterns explain more</h3>
+            <p>Morning fatigue, afternoon crashes, and feeling wired at night often make more sense when viewed as patterns.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="videos">
+      <div class="container">
+        <h2 class="section-title">Watch the free video series</h2>
+        <p class="section-intro">Created by Rebecca Jeffers, MD — a board-certified endocrinologist. These videos cover what there is rarely time to fully explain in a typical appointment.</p>
+
+        <div class="modules">
+          <article class="module">
+            <div class="module-number">Video 1</div>
+            <div>
+              <h3>Why you can feel exhausted even when labs are normal</h3>
+              <p>The big picture: why normal lab results do not always explain daily energy, fatigue, or brain fog.</p>
+              <a href="YOUR_YOUTUBE_LINK_1" target="_blank" rel="noopener">Watch video →</a>
+            </div>
+          </article>
+
+          <article class="module">
+            <div class="module-number">Video 2</div>
+            <div>
+              <h3>Cortisol timing and morning energy</h3>
+              <p>How your daily stress rhythm shapes how you feel from the moment you wake up.</p>
+              <a href="YOUR_YOUTUBE_LINK_2" target="_blank" rel="noopener">Watch video →</a>
+            </div>
+          </article>
+
+          <article class="module">
+            <div class="module-number">Video 3</div>
+            <div>
+              <h3>Thyroid labs: what “normal” does and does not tell you</h3>
+              <p>A clear explanation of thyroid lab ranges, what they can show, and what they cannot fully explain.</p>
+              <a href="YOUR_YOUTUBE_LINK_3" target="_blank" rel="noopener">Watch video →</a>
+            </div>
+          </article>
+
+          <article class="module">
+            <div class="module-number">Video 4</div>
+            <div>
+              <h3>Sleep timing, food timing, and energy crashes</h3>
+              <p>Why total hours of sleep are only part of the story, and how food timing and composition affect energy and focus.</p>
+              <a href="YOUR_YOUTUBE_LINK_4" target="_blank" rel="noopener">Watch video →</a>
+            </div>
+          </article>
+
+          <article class="module">
+            <div class="module-number">Video 5</div>
+            <div>
+              <h3>Movement, metabolism, and putting the pattern together</h3>
+              <p>The difference between structured exercise and frequent daily movement — and how timing affects how you feel.</p>
+              <a href="YOUR_YOUTUBE_LINK_5" target="_blank" rel="noopener">Watch video →</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="note">
+          <strong>Medical note:</strong> This free series is educational and does not diagnose, treat, or replace medical care. Persistent or worsening symptoms should be discussed with your clinician.
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container about">
+        <div class="portrait-placeholder">
+          Add a professional photo here if you want.
+        </div>
+        <div>
+          <h2 class="section-title">About Dr. Rebecca Jeffers</h2>
+          <p class="section-intro">I’m a board-certified endocrinologist who works with patients whose symptoms do not always match their lab results. I created this free series to explain the patterns that are often too complex to fully cover in a standard visit.</p>
+          <p class="section-intro">The goal is not to give generic advice or quick fixes. It is to help you understand what may actually be shaping your energy — so you can have clearer conversations and make more informed next steps.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Rebecca Jeffers, MD. Educational content only. Not medical advice.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
