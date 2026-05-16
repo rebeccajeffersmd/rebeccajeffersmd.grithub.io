@@ -8,23 +8,22 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;350;400;450;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,450;8..60,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,450;8..60,500&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --navy: #08172a;
-      --navy-2: #10243d;
-      --blue: #223f70;
-      --sage: #7f9f7a;
+      --navy: #07172a;
+      --blue: #203d6b;
+      --sage: #6f8970;
       --cream: #f4f1ea;
-      --text: rgba(244, 241, 234, 0.96);
-      --soft: rgba(244, 241, 234, 0.74);
-      --muted: rgba(244, 241, 234, 0.56);
-      --line: rgba(244, 241, 234, 0.12);
-      --line-soft: rgba(244, 241, 234, 0.075);
-      --card: rgba(255, 255, 255, 0.05);
-      --shadow: 0 28px 80px rgba(0, 0, 0, 0.28);
-      --radius: 30px;
+      --text: rgba(244,241,234,0.95);
+      --soft: rgba(244,241,234,0.74);
+      --muted: rgba(244,241,234,0.56);
+      --line: rgba(244,241,234,0.12);
+      --line-soft: rgba(244,241,234,0.075);
+      --card: rgba(255,255,255,0.045);
+      --card-hover: rgba(255,255,255,0.07);
+      --shadow: 0 24px 70px rgba(0,0,0,0.24);
     }
 
     * {
@@ -40,11 +39,10 @@
       color: var(--text);
       font-family: Inter, system-ui, sans-serif;
       font-weight: 350;
-      line-height: 1.75;
+      line-height: 1.7;
       background:
-        radial-gradient(circle at 12% 0%, rgba(127, 159, 122, 0.22), transparent 34%),
-        radial-gradient(circle at 86% 10%, rgba(244, 241, 234, 0.045), transparent 28%),
-        linear-gradient(135deg, #6f8f78 0%, #435f74 32%, #223f70 68%, #08172a 100%);
+        radial-gradient(circle at 8% 0%, rgba(111,137,112,0.16), transparent 34%),
+        linear-gradient(135deg, #526f73 0%, #304f6e 42%, #07172a 100%);
       background-attachment: fixed;
     }
 
@@ -54,49 +52,34 @@
       inset: 0;
       pointer-events: none;
       background-image:
-        linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.016) 1px, transparent 1px);
-      background-size: 68px 68px;
-      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.32), transparent 70%);
-    }
-
-    body::after {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      opacity: 0.11;
-      background-image: radial-gradient(rgba(255,255,255,0.28) 0.5px, transparent 0.5px);
-      background-size: 3px 3px;
-      mix-blend-mode: soft-light;
+        linear-gradient(rgba(255,255,255,0.014) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.012) 1px, transparent 1px);
+      background-size: 70px 70px;
+      opacity: 0.5;
     }
 
     .page {
-      width: min(1120px, calc(100% - 40px));
+      width: min(1080px, calc(100% - 40px));
       margin: 0 auto;
-      position: relative;
     }
 
     header {
-      padding: 38px 0 34px;
-    }
-
-    .brand {
+      padding: 32px 0 24px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       gap: 28px;
     }
 
     .logo {
-      width: min(300px, 62vw);
+      width: min(280px, 60vw);
       height: auto;
       display: block;
-      filter: drop-shadow(0 12px 26px rgba(0,0,0,0.24));
+      filter: drop-shadow(0 10px 22px rgba(0,0,0,0.22));
     }
 
     .nav-note {
-      font-size: 0.74rem;
+      font-size: 0.72rem;
       letter-spacing: 0.18em;
       text-transform: uppercase;
       color: rgba(244,241,234,0.58);
@@ -104,99 +87,73 @@
       font-weight: 500;
     }
 
-    main {
-      padding-bottom: 40px;
-    }
-
-    .hero-shell {
-      position: relative;
-      margin-top: 8px;
-      padding: clamp(44px, 6vw, 76px) clamp(28px, 6vw, 74px);
-      border-radius: 38px;
+    .hero {
+      margin-top: 6px;
+      padding: clamp(34px, 5vw, 54px);
+      border-radius: 32px;
       border: 1px solid var(--line);
       background:
-        radial-gradient(circle at 50% 0%, rgba(244,241,234,0.055), transparent 34%),
-        linear-gradient(180deg, rgba(8, 23, 42, 0.64), rgba(8, 23, 42, 0.36));
+        radial-gradient(circle at top center, rgba(244,241,234,0.045), transparent 38%),
+        linear-gradient(180deg, rgba(7,23,42,0.68), rgba(7,23,42,0.38));
       box-shadow: var(--shadow);
-      backdrop-filter: blur(18px);
-      overflow: hidden;
-    }
-
-    .hero-shell::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 18%;
-      right: 18%;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(244,241,234,0.34), transparent);
-    }
-
-    .hero {
-      min-height: 50vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       text-align: center;
     }
 
     .eyebrow {
-      margin-bottom: 24px;
-      font-size: 0.76rem;
-      letter-spacing: 0.22em;
+      margin-bottom: 18px;
+      font-size: 0.74rem;
+      letter-spacing: 0.21em;
       text-transform: uppercase;
-      color: rgba(244,241,234,0.60);
+      color: rgba(244,241,234,0.62);
       font-weight: 600;
     }
 
     h1, h2, h3 {
       margin: 0;
       line-height: 1.04;
-      letter-spacing: -0.045em;
+      letter-spacing: -0.04em;
     }
 
     h1 {
       font-family: Inter, system-ui, sans-serif;
-      font-size: clamp(3.2rem, 6.8vw, 6.15rem);
+      font-size: clamp(2.85rem, 5.4vw, 5.1rem);
       font-weight: 430;
-      max-width: 860px;
     }
 
     .subtitle {
-      margin: 34px auto 0;
-      max-width: 760px;
+      margin: 26px auto 0;
+      max-width: 720px;
       color: var(--soft);
-      font-size: clamp(1.05rem, 1.45vw, 1.22rem);
-      line-height: 1.9;
+      font-size: clamp(1rem, 1.35vw, 1.16rem);
+      line-height: 1.85;
     }
 
     .clinical-observations {
-      width: 100%;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 14px;
-      margin-top: 56px;
+      margin-top: 38px;
     }
 
     .observation {
       text-align: left;
-      padding: 20px 22px;
-      border-radius: 19px;
+      padding: 18px 20px;
+      border-radius: 18px;
       border: 1px solid var(--line-soft);
-      background: rgba(255,255,255,0.03);
+      background: rgba(255,255,255,0.032);
       color: rgba(244,241,234,0.76);
-      font-size: 0.96rem;
+      font-size: 0.95rem;
       line-height: 1.55;
     }
 
-    .section {
-      padding: 84px 0;
+    section {
+      padding: 68px 0;
       border-bottom: 1px solid rgba(244,241,234,0.075);
     }
 
     .section-head {
-      max-width: 780px;
-      margin-bottom: 40px;
+      max-width: 760px;
+      margin-bottom: 34px;
     }
 
     .section-head.center {
@@ -207,27 +164,32 @@
 
     h2 {
       font-family: "Source Serif 4", Georgia, serif;
-      font-size: clamp(2.35rem, 4.2vw, 4.25rem);
+      font-size: clamp(2.1rem, 3.8vw, 3.7rem);
       font-weight: 430;
     }
 
+    .section-head.compact h2 {
+      font-family: Inter, system-ui, sans-serif;
+      font-size: clamp(1.8rem, 3vw, 2.7rem);
+      font-weight: 450;
+      letter-spacing: -0.035em;
+    }
+
     .section-head p {
-      margin: 22px 0 0;
+      margin: 18px 0 0;
       color: var(--soft);
-      font-size: 1.06rem;
-      line-height: 1.85;
+      font-size: 1.04rem;
+      line-height: 1.8;
     }
 
     .video-panel {
-      max-width: 900px;
+      max-width: 860px;
       margin: 0 auto;
-      padding: clamp(14px, 2vw, 22px);
-      border-radius: 30px;
+      padding: 18px;
+      border-radius: 28px;
       border: 1px solid var(--line);
-      background:
-        linear-gradient(135deg, rgba(127,159,122,0.13), rgba(34,63,112,0.15)),
-        rgba(255,255,255,0.032);
-      box-shadow: 0 30px 80px rgba(0,0,0,0.26);
+      background: rgba(255,255,255,0.035);
+      box-shadow: 0 24px 70px rgba(0,0,0,0.24);
     }
 
     .custom-video {
@@ -235,44 +197,43 @@
       display: grid;
       place-items: center;
       overflow: hidden;
-      min-height: 420px;
       aspect-ratio: 16 / 9;
-      border-radius: 24px;
+      min-height: 360px;
+      border-radius: 22px;
       border: 1px solid rgba(244,241,234,0.12);
       text-decoration: none;
       color: var(--cream);
       background:
-        radial-gradient(circle at 50% 40%, rgba(244,241,234,0.08), transparent 32%),
-        linear-gradient(135deg, rgba(127,159,122,0.50), rgba(34,63,112,0.76)),
-        #08172a;
+        linear-gradient(135deg, rgba(111,137,112,0.34), rgba(32,61,107,0.76)),
+        #07172a;
     }
 
     .custom-video::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, rgba(8,23,42,0.18), rgba(8,23,42,0.56));
+      background: linear-gradient(180deg, rgba(7,23,42,0.12), rgba(7,23,42,0.58));
     }
 
     .custom-video-content {
       position: relative;
       z-index: 1;
       text-align: center;
-      padding: 34px;
+      padding: 32px;
     }
 
     .video-logo {
-      width: min(230px, 48vw);
+      width: min(210px, 46vw);
       display: block;
-      margin: 0 auto 28px;
-      box-shadow: 0 20px 54px rgba(0,0,0,0.22);
+      margin: 0 auto 24px;
+      box-shadow: 0 18px 46px rgba(0,0,0,0.22);
     }
 
     .video-title {
       font-family: "Source Serif 4", Georgia, serif;
-      font-size: clamp(2.1rem, 4.2vw, 4rem);
+      font-size: clamp(2rem, 3.8vw, 3.5rem);
       line-height: 1.05;
-      letter-spacing: -0.045em;
+      letter-spacing: -0.04em;
       font-weight: 430;
       margin-bottom: 22px;
     }
@@ -281,59 +242,57 @@
       display: inline-flex;
       align-items: center;
       gap: 12px;
-      padding: 13px 20px;
+      padding: 12px 18px;
       border-radius: 999px;
       border: 1px solid rgba(244,241,234,0.22);
-      background: rgba(8,23,42,0.42);
+      background: rgba(7,23,42,0.46);
       color: rgba(244,241,234,0.92);
-      font-size: 0.96rem;
+      font-size: 0.95rem;
       font-weight: 500;
-      backdrop-filter: blur(12px);
     }
 
     .play-icon {
-      width: 34px;
-      height: 34px;
+      width: 32px;
+      height: 32px;
       border-radius: 50%;
       display: grid;
       place-items: center;
       background: rgba(244,241,234,0.92);
       color: var(--navy);
-      font-size: 0.9rem;
-      line-height: 1;
+      font-size: 0.84rem;
     }
 
     .content-card {
-      max-width: 900px;
+      max-width: 880px;
       margin: 0 auto;
       border: 1px solid var(--line);
-      background: rgba(255,255,255,0.045);
-      border-radius: var(--radius);
-      padding: clamp(28px, 5vw, 50px);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.13);
+      background: rgba(255,255,255,0.042);
+      border-radius: 28px;
+      padding: clamp(28px, 5vw, 46px);
+      box-shadow: 0 18px 54px rgba(0,0,0,0.12);
     }
 
     .content-card p {
-      margin: 0 0 24px;
+      margin: 0 0 22px;
       color: var(--soft);
-      font-size: 1.05rem;
-      line-height: 1.85;
+      font-size: 1.04rem;
+      line-height: 1.82;
     }
 
     ul {
-      margin: 26px 0;
-      padding-left: 1.25rem;
+      margin: 24px 0;
+      padding-left: 1.2rem;
       color: var(--soft);
     }
 
     li {
-      margin: 12px 0;
+      margin: 10px 0;
       padding-left: 4px;
     }
 
     .modules {
       display: grid;
-      gap: 14px;
+      gap: 13px;
     }
 
     .module {
@@ -343,27 +302,27 @@
       align-items: center;
       text-decoration: none;
       color: var(--text);
-      padding: 22px 26px;
-      border-radius: 20px;
+      padding: 20px 24px;
+      border-radius: 18px;
       border: 1px solid var(--line-soft);
       background: rgba(255,255,255,0.038);
       transition: 180ms ease;
     }
 
     .module:hover {
-      background: rgba(255,255,255,0.068);
+      background: var(--card-hover);
       transform: translateY(-1px);
       border-color: rgba(244,241,234,0.16);
     }
 
     .module-label {
       color: rgba(203,225,245,0.82);
-      font-size: 0.93rem;
+      font-size: 0.92rem;
       font-weight: 500;
     }
 
     .module-title {
-      font-size: 1rem;
+      font-size: 0.99rem;
       font-weight: 500;
       letter-spacing: -0.015em;
       line-height: 1.4;
@@ -371,7 +330,7 @@
 
     .duration {
       color: var(--muted);
-      font-size: 0.95rem;
+      font-size: 0.94rem;
       white-space: nowrap;
     }
 
@@ -383,15 +342,15 @@
 
     .about {
       display: grid;
-      grid-template-columns: 0.82fr 1.18fr;
-      gap: clamp(34px, 6vw, 70px);
+      grid-template-columns: 0.84fr 1.16fr;
+      gap: clamp(34px, 6vw, 68px);
       align-items: center;
     }
 
     .about-photo {
       width: 100%;
-      border-radius: 28px;
-      aspect-ratio: 4 / 5.25;
+      border-radius: 26px;
+      aspect-ratio: 4 / 5.15;
       object-fit: cover;
       display: block;
       box-shadow: var(--shadow);
@@ -399,40 +358,29 @@
     }
 
     .about-copy p {
-      margin: 24px 0 0;
+      margin: 22px 0 0;
       color: var(--soft);
-      font-size: 1.06rem;
-      line-height: 1.9;
-    }
-
-    .medical-note {
-      margin-top: 30px;
-      padding: 24px 26px;
-      border-radius: 22px;
-      background: rgba(8, 23, 42, 0.42);
-      border: 1px solid var(--line-soft);
-      color: rgba(244,241,234,0.76);
-      font-size: 0.98rem;
-      line-height: 1.7;
+      font-size: 1.04rem;
+      line-height: 1.86;
     }
 
     .disclaimer {
+      max-width: 860px;
+      margin: 0 auto;
       color: rgba(244,241,234,0.58);
       font-size: 0.9rem;
-      line-height: 1.8;
-      max-width: 920px;
-      margin: 0 auto;
+      line-height: 1.78;
     }
 
     footer {
       padding: 34px 0 58px;
-      color: rgba(244,241,234,0.45);
+      color: rgba(244,241,234,0.46);
       font-size: 0.88rem;
       text-align: center;
     }
 
     @media (max-width: 900px) {
-      .brand {
+      header {
         align-items: flex-start;
         flex-direction: column;
       }
@@ -448,28 +396,19 @@
 
       .module {
         grid-template-columns: 1fr;
-        gap: 8px;
+        gap: 7px;
       }
 
-      .duration,
-      .watch {
-        font-size: 0.92rem;
+      .hero {
+        padding: 34px 22px;
       }
 
-      .hero-shell {
-        padding: 38px 22px;
-      }
-
-      .section {
-        padding: 64px 0;
-      }
-
-      h1 {
-        font-size: clamp(3rem, 13vw, 4.8rem);
+      section {
+        padding: 56px 0;
       }
 
       .custom-video {
-        min-height: 330px;
+        min-height: 310px;
       }
     }
   </style>
@@ -478,38 +417,33 @@
 <body>
   <div class="page">
     <header>
-      <div class="brand">
-        <img src="logo.jpg" alt="The Rhythm of Energy logo" class="logo" />
-        <div class="nav-note">Evidence-Based Endocrinology Education</div>
-      </div>
+      <img src="logo.jpg" alt="The Rhythm of Energy logo" class="logo" />
+      <div class="nav-note">Evidence-Based Endocrinology Education</div>
     </header>
 
     <main>
-      <section class="hero-shell">
-        <div class="hero">
-          <div class="eyebrow">BOARD-CERTIFIED ENDOCRINOLOGIST</div>
+      <section class="hero">
+        <div class="eyebrow">BOARD-CERTIFIED ENDOCRINOLOGIST</div>
 
-          <h1>Normal Labs.<br />Still Exhausted.</h1>
+        <h1>Normal Labs.<br />Still Exhausted.</h1>
 
-          <p class="subtitle">
-            A free physician-created video series explaining why fatigue, brain fog, and energy crashes can continue
-            even when routine labs look normal.
-          </p>
+        <p class="subtitle">
+          A free physician-created video series explaining why fatigue, brain fog, and energy crashes can continue
+          even when routine labs look normal.
+        </p>
 
-          <div class="clinical-observations">
-            <div class="observation">Wake up exhausted even after a full night of sleep</div>
-            <div class="observation">Notice energy crashes during the afternoon</div>
-            <div class="observation">Feel wired at night but unrefreshed in the morning</div>
-          </div>
+        <div class="clinical-observations">
+          <div class="observation">Wake up exhausted even after a full night of sleep</div>
+          <div class="observation">Notice energy crashes during the afternoon</div>
+          <div class="observation">Feel wired at night but unrefreshed in the morning</div>
         </div>
       </section>
 
-      <section class="section" id="welcome">
-        <div class="section-head center">
-          <h2>Welcome to The Rhythm of Energy</h2>
+      <section id="welcome">
+        <div class="section-head center compact">
+          <h2>Watch the Introduction</h2>
           <p>
-            A calm, structured introduction to the physiology behind fatigue, metabolism, hormones, sleep, stress,
-            nutrition, and daily rhythms.
+            Start with a brief overview of the series and the physiology it will help you understand.
           </p>
         </div>
 
@@ -517,17 +451,17 @@
           <a class="custom-video" href="https://www.youtube.com/watch?v=syiMPGoUdGA" target="_blank" rel="noopener">
             <div class="custom-video-content">
               <img src="logo.jpg" alt="The Rhythm of Energy logo" class="video-logo" />
-              <div class="video-title">Welcome to<br />The Rhythm of Energy</div>
+              <div class="video-title">The Rhythm of Energy</div>
               <div class="play-button">
                 <span class="play-icon">▶</span>
-                Watch the welcome video
+                Watch welcome video
               </div>
             </div>
           </a>
         </div>
       </section>
 
-      <section class="section">
+      <section>
         <div class="section-head">
           <h2>What This Series Covers</h2>
         </div>
@@ -557,7 +491,7 @@
         </div>
       </section>
 
-      <section class="section" id="modules">
+      <section id="modules">
         <div class="section-head">
           <h2>The Video Series</h2>
           <p>
@@ -639,7 +573,7 @@
         </div>
       </section>
 
-      <section class="section">
+      <section>
         <div class="about">
           <img src="photo.jpg" alt="Rebecca Jeffers, MD" class="about-photo" />
 
@@ -661,16 +595,11 @@
               The goal is not to diagnose or replace medical care. It is to provide a clearer understanding of the
               patterns that may be affecting how you feel day to day.
             </p>
-
-            <div class="medical-note">
-              <strong>Medical note:</strong> This content is educational and is not medical advice. Persistent or
-              worsening symptoms should be discussed with your clinician.
-            </div>
           </div>
         </div>
       </section>
 
-      <section class="section">
+      <section>
         <div class="disclaimer">
           <strong>Medical Disclaimer:</strong>
           This website and video series are for general educational purposes only and do not constitute medical advice,
@@ -682,7 +611,7 @@
     </main>
 
     <footer>
-      © Rebecca Jeffers, MD. The Rhythm of Energy.
+      Educational Endocrinology by Rebecca Jeffers, MD
     </footer>
   </div>
 </body>
