@@ -8,280 +8,276 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;550;600;700&display=swap" rel="stylesheet">
 
 <style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html{
-    scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-    font-family:'Inter',sans-serif;
+body {
+    font-family: 'Inter', sans-serif;
     background:
         radial-gradient(circle at top left, rgba(155,191,148,0.18), transparent 34%),
-        linear-gradient(135deg,#09111f 0%,#14233f 46%,#2a4b82 100%);
-    color:#f8fafc;
-    line-height:1.7;
-    min-height:100vh;
+        linear-gradient(135deg, #09111f 0%, #14233f 46%, #2a4b82 100%);
+    color: #f8fafc;
+    line-height: 1.7;
+    min-height: 100vh;
 }
 
-.page{
-    width:min(1080px,92%);
-    margin:0 auto;
-    padding:40px 0 72px;
+.page {
+    width: min(1080px, 92%);
+    margin: 0 auto;
+    padding: 40px 0 72px;
 }
 
-.shell{
-    background:rgba(255,255,255,0.045);
-    border:1px solid rgba(255,255,255,0.08);
-    border-radius:36px;
-    box-shadow:0 32px 90px rgba(0,0,0,0.38);
-    backdrop-filter:blur(28px);
-    overflow:hidden;
+.shell {
+    background: rgba(255,255,255,0.045);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 36px;
+    box-shadow: 0 32px 90px rgba(0,0,0,0.38);
+    backdrop-filter: blur(28px);
+    overflow: hidden;
 }
 
-.hero{
-    padding:64px 64px 54px;
-    text-align:center;
+.hero {
+    padding: 68px 64px 56px;
+    text-align: center;
 }
 
-.logo{
-    width:150px;
-    max-width:70%;
-    margin-bottom:28px;
+.logo {
+    width: 175px;
+    max-width: 76%;
+    margin-bottom: 34px;
 }
 
-.eyebrow{
-    font-size:0.82rem;
-    letter-spacing:0.14em;
-    text-transform:uppercase;
-    color:rgba(255,255,255,0.58);
-    margin-bottom:26px;
-    font-weight:600;
+.eyebrow {
+    font-size: 0.78rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.58);
+    margin-bottom: 30px;
+    font-weight: 600;
 }
 
-h1{
-    font-size:clamp(2.7rem,6vw,4.4rem);
-    font-weight:600;
-    line-height:1.05;
-    letter-spacing:-0.05em;
-    color:#ffffff;
-    max-width:760px;
-    margin:0 auto 28px;
+h1 {
+    font-size: clamp(2.8rem, 5.6vw, 4.8rem);
+    font-weight: 550;
+    line-height: 1.14;
+    letter-spacing: -0.055em;
+    color: #ffffff;
+    max-width: 760px;
+    margin: 0 auto 34px;
 }
 
-.lead{
-    max-width:760px;
-    margin:0 auto 42px;
-    font-size:1.15rem;
-    line-height:1.9;
-    color:rgba(248,250,252,0.82);
-    font-weight:400;
+.lead {
+    max-width: 640px;
+    margin: 0 auto 46px;
+    font-size: 1.12rem;
+    line-height: 1.95;
+    color: rgba(248,250,252,0.78);
+    font-weight: 400;
 }
 
-.symptoms{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:14px;
-    margin-bottom:52px;
+.symptoms {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-bottom: 56px;
 }
 
-.symptom{
-    background:rgba(255,255,255,0.05);
-    border:1px solid rgba(255,255,255,0.08);
-    border-radius:22px;
-    padding:20px;
-    font-size:0.98rem;
-    color:rgba(255,255,255,0.9);
-    line-height:1.65;
+.symptom {
+    background: rgba(255,255,255,0.035);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 20px;
+    padding: 18px;
+    font-size: 0.97rem;
+    color: rgba(255,255,255,0.88);
+    line-height: 1.65;
 }
 
-.video-wrap{
-    width:min(860px,100%);
-    margin:0 auto;
-    border-radius:28px;
-    overflow:hidden;
-    border:1px solid rgba(255,255,255,0.08);
-    box-shadow:0 24px 70px rgba(0,0,0,0.42);
+.video-wrap {
+    width: min(860px, 100%);
+    margin: 0 auto;
+    border-radius: 28px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 24px 70px rgba(0,0,0,0.42);
 }
 
-.video{
-    position:relative;
-    padding-bottom:56.25%;
-    height:0;
-    background:#09111f;
+.video {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    background: #09111f;
 }
 
-.video iframe{
-    position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
+.video iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
 }
 
-.section{
-    padding:70px 64px;
-    border-top:1px solid rgba(255,255,255,0.06);
+.section {
+    padding: 70px 64px;
+    border-top: 1px solid rgba(255,255,255,0.06);
 }
 
-h2{
-    font-size:clamp(1.9rem,4vw,2.8rem);
-    font-weight:600;
-    letter-spacing:-0.04em;
-    margin-bottom:24px;
-    color:#ffffff;
+h2 {
+    font-size: clamp(1.9rem, 4vw, 2.8rem);
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    margin-bottom: 24px;
+    color: #ffffff;
 }
 
-p{
-    font-size:1.04rem;
-    color:rgba(248,250,252,0.82);
-    margin-bottom:20px;
+p {
+    font-size: 1.04rem;
+    color: rgba(248,250,252,0.82);
+    margin-bottom: 20px;
 }
 
-.card{
-    background:rgba(255,255,255,0.045);
-    border:1px solid rgba(255,255,255,0.08);
-    border-radius:28px;
-    padding:40px;
+.card {
+    background: rgba(255,255,255,0.045);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 28px;
+    padding: 40px;
 }
 
-ul{
-    padding-left:22px;
-    margin:24px 0;
+ul {
+    padding-left: 22px;
+    margin: 24px 0;
 }
 
-li{
-    margin-bottom:14px;
-    color:rgba(255,255,255,0.88);
-    font-size:1.02rem;
+li {
+    margin-bottom: 14px;
+    color: rgba(255,255,255,0.88);
+    font-size: 1.02rem;
 }
 
-.small{
-    color:rgba(255,255,255,0.56);
-    margin-bottom:28px;
-    font-size:0.96rem;
+.small {
+    color: rgba(255,255,255,0.56);
+    margin-bottom: 28px;
+    font-size: 0.96rem;
 }
 
-.module-list{
-    display:grid;
-    gap:14px;
-    margin-top:34px;
+.module-list {
+    display: grid;
+    gap: 14px;
+    margin-top: 34px;
 }
 
-.module{
-    display:grid;
-    grid-template-columns:100px 1fr auto auto;
-    gap:18px;
-    align-items:center;
-    background:rgba(255,255,255,0.045);
-    border:1px solid rgba(255,255,255,0.07);
-    border-radius:22px;
-    padding:22px 24px;
-    transition:0.18s ease;
+.module {
+    display: grid;
+    grid-template-columns: 100px 1fr auto auto;
+    gap: 18px;
+    align-items: center;
+    background: rgba(255,255,255,0.045);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 22px;
+    padding: 22px 24px;
+    transition: 0.18s ease;
 }
 
-.module:hover{
-    background:rgba(255,255,255,0.065);
-    transform:translateY(-2px);
+.module:hover {
+    background: rgba(255,255,255,0.065);
+    transform: translateY(-2px);
 }
 
-.module-number{
-    color:#bfdbfe;
-    font-size:0.88rem;
-    font-weight:700;
-    letter-spacing:0.03em;
+.module-number {
+    color: #bfdbfe;
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
 }
 
-.module-title{
-    color:#ffffff;
-    font-weight:600;
-    line-height:1.45;
+.module-title {
+    color: #ffffff;
+    font-weight: 600;
+    line-height: 1.45;
 }
 
-.module-time{
-    color:rgba(255,255,255,0.5);
-    font-size:0.92rem;
+.module-time {
+    color: rgba(255,255,255,0.5);
+    font-size: 0.92rem;
 }
 
-.module a{
-    color:#dbeafe;
-    text-decoration:none;
-    font-weight:700;
+.module a {
+    color: #dbeafe;
+    text-decoration: none;
+    font-weight: 700;
 }
 
-.about-grid{
-    display:grid;
-    grid-template-columns:300px 1fr;
-    gap:48px;
-    align-items:start;
+.about-grid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 48px;
+    align-items: start;
 }
 
-.about-photo{
-    width:100%;
-    border-radius:28px;
-    border:1px solid rgba(255,255,255,0.08);
-    box-shadow:0 24px 70px rgba(0,0,0,0.36);
+.about-photo {
+    width: 100%;
+    border-radius: 28px;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 24px 70px rgba(0,0,0,0.36);
 }
 
-.disclaimer{
-    background:rgba(10,15,25,0.32);
-    border:1px solid rgba(255,255,255,0.06);
-    border-radius:22px;
-    padding:22px;
-    margin-top:30px;
+.disclaimer {
+    background: rgba(10,15,25,0.32);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 22px;
+    padding: 22px;
+    margin-top: 30px;
 }
 
-footer{
-    text-align:center;
-    padding:42px 0 0;
-    color:rgba(255,255,255,0.42);
-    font-size:0.88rem;
+footer {
+    text-align: center;
+    padding: 42px 0 0;
+    color: rgba(255,255,255,0.42);
+    font-size: 0.88rem;
 }
 
-@media(max-width:860px){
-
+@media(max-width:860px) {
     .hero,
-    .section{
-        padding:44px 24px;
+    .section {
+        padding: 44px 24px;
     }
 
-    .symptoms{
-        grid-template-columns:1fr;
+    .symptoms {
+        grid-template-columns: 1fr;
     }
 
-    .module{
-        grid-template-columns:1fr;
-        gap:10px;
+    .module {
+        grid-template-columns: 1fr;
+        gap: 10px;
     }
 
-    .about-grid{
-        grid-template-columns:1fr;
+    .about-grid {
+        grid-template-columns: 1fr;
     }
 
-    h1{
-        font-size:3rem;
+    h1 {
+        font-size: 3rem;
+        line-height: 1.12;
     }
 
-    h2{
-        font-size:2.2rem;
+    h2 {
+        font-size: 2.2rem;
     }
 }
-
 </style>
 </head>
 
 <body>
 
 <div class="page">
-
 <div class="shell">
 
 <section class="hero">
@@ -289,7 +285,7 @@ footer{
 <img src="logo.jpg" alt="The Rhythm of Energy Logo" class="logo">
 
 <div class="eyebrow">
-Free Educational Series by Rebecca Jeffers, MD
+Board-Certified Endocrinologist
 </div>
 
 <h1>
@@ -302,34 +298,20 @@ A free physician-created video series explaining why fatigue, brain fog, and ene
 </p>
 
 <div class="symptoms">
-
-<div class="symptom">
-Wake up exhausted even after a full night of sleep
-</div>
-
-<div class="symptom">
-Energy crashes during the afternoon
-</div>
-
-<div class="symptom">
-Feel wired at night but unrefreshed in the morning
-</div>
-
+    <div class="symptom">Wake up exhausted even after a full night of sleep</div>
+    <div class="symptom">Energy crashes during the afternoon</div>
+    <div class="symptom">Feel wired at night but unrefreshed in the morning</div>
 </div>
 
 <div class="video-wrap">
-
-<div class="video">
-
-<iframe
-src="https://www.youtube.com/embed/syiMPGoUdGA"
-title="Welcome Video"
-frameborder="0"
-allowfullscreen>
-</iframe>
-
-</div>
-
+    <div class="video">
+        <iframe
+        src="https://www.youtube.com/embed/syiMPGoUdGA"
+        title="Welcome Video"
+        frameborder="0"
+        allowfullscreen>
+        </iframe>
+    </div>
 </div>
 
 </section>
@@ -349,17 +331,11 @@ Most people are given isolated pieces of the puzzle — sleep, stress, diet, hor
 </p>
 
 <ul>
-
-<li>How daily cortisol rhythm shapes energy from morning through night</li>
-
-<li>What “normal” thyroid labs do — and do not — tell you</li>
-
-<li>Why sleep quality matters just as much as sleep duration</li>
-
-<li>How food timing and composition affect focus, cravings, and crashes</li>
-
-<li>How movement timing influences metabolic efficiency and energy</li>
-
+    <li>How daily cortisol rhythm shapes energy from morning through night</li>
+    <li>What “normal” thyroid labs do — and do not — tell you</li>
+    <li>Why sleep quality matters just as much as sleep duration</li>
+    <li>How food timing and composition affect focus, cravings, and crashes</li>
+    <li>How movement timing influences metabolic efficiency and energy</li>
 </ul>
 
 <p>
@@ -381,73 +357,73 @@ Each module builds on the previous one, gradually connecting how sleep, stress p
 <div class="module-list">
 
 <div class="module">
-<div class="module-number">Intro</div>
-<div class="module-title">Introduction</div>
-<div class="module-time">1:34</div>
-<a href="https://youtu.be/j2lSoxadhVg" target="_blank">Watch →</a>
+    <div class="module-number">Intro</div>
+    <div class="module-title">Introduction</div>
+    <div class="module-time">1:34</div>
+    <a href="https://youtu.be/j2lSoxadhVg" target="_blank">Watch →</a>
 </div>
 
 <div class="module">
-<div class="module-number">Module 1</div>
-<div class="module-title">Energy & Fatigue — Understanding Your Body's Signals</div>
-<div class="module-time">6:24</div>
-<a href="https://youtu.be/H24hpRijWZk" target="_blank">Watch →</a>
+    <div class="module-number">Module 1</div>
+    <div class="module-title">Energy & Fatigue — Understanding Your Body's Signals</div>
+    <div class="module-time">6:24</div>
+    <a href="https://youtu.be/H24hpRijWZk" target="_blank">Watch →</a>
 </div>
 
 <div class="module">
-<div class="module-number">Module 2</div>
-<div class="module-title">Lab Literacy — What “Normal” Really Means</div>
-<div class="module-time">4:00</div>
-<a href="https://youtu.be/l3Hp4e2lMak" target="_blank">Watch →</a>
+    <div class="module-number">Module 2</div>
+    <div class="module-title">Lab Literacy — What “Normal” Really Means</div>
+    <div class="module-time">4:00</div>
+    <a href="https://youtu.be/l3Hp4e2lMak" target="_blank">Watch →</a>
 </div>
 
 <div class="module">
-<div class="module-number">Module 3</div>
-<div class="module-title">Thyroid — What it Does and What it Doesn't Explain</div>
-<div class="module-time">5:25</div>
-<a href="https://youtu.be/tQHhrBnsgA0" target="_blank">Watch →</a>
+    <div class="module-number">Module 3</div>
+    <div class="module-title">Thyroid — What it Does and What it Doesn't Explain</div>
+    <div class="module-time">5:25</div>
+    <a href="https://youtu.be/tQHhrBnsgA0" target="_blank">Watch →</a>
 </div>
 
 <div class="module">
-<div class="module-number">Module 4</div>
-<div class="module-title">The Autonomic Nervous System and the Hypothalamic–Pituitary–Adrenal Axis</div>
-<div class="module-time">6:44</div>
-<a href="https://youtu.be/fJi3YcIBNm0" target="_blank">Watch →</a>
+    <div class="module-number">Module 4</div>
+    <div class="module-title">The Autonomic Nervous System and the Hypothalamic–Pituitary–Adrenal Axis</div>
+    <div class="module-time">6:44</div>
+    <a href="https://youtu.be/fJi3YcIBNm0" target="_blank">Watch →</a>
 </div>
 
 <div class="module">
-<div class="module-number">Module 5</div>
-<div class="module-title">Sleep and Circadian Rhythm — Training Your 24-Hour Energy Clock</div>
-<div class="module-time">10:55</div>
-<a href="https://youtu.be/S_brF85yRmg" target="_blank">Watch →</a>
+    <div class="module-number">Module 5</div>
+    <div class="module-title">Sleep and Circadian Rhythm — Training Your 24-Hour Energy Clock</div>
+    <div class="module-time">10:55</div>
+    <a href="https://youtu.be/S_brF85yRmg" target="_blank">Watch →</a>
 </div>
 
 <div class="module">
-<div class="module-number">Module 6</div>
-<div class="module-title">Nutrition and Metabolic Stability — How Food, Timing, and Appetite Signals Shape Your Energy</div>
-<div class="module-time">16:06</div>
-<a href="https://youtu.be/PbVPp1uSFy4" target="_blank">Watch →</a>
+    <div class="module-number">Module 6</div>
+    <div class="module-title">Nutrition and Metabolic Stability — How Food, Timing, and Appetite Signals Shape Your Energy</div>
+    <div class="module-time">16:06</div>
+    <a href="https://youtu.be/PbVPp1uSFy4" target="_blank">Watch →</a>
 </div>
 
 <div class="module">
-<div class="module-number">Module 7</div>
-<div class="module-title">Movement, Muscle, and Metabolic Efficiency</div>
-<div class="module-time">7:24</div>
-<a href="https://youtu.be/pROHg071mb8" target="_blank">Watch →</a>
+    <div class="module-number">Module 7</div>
+    <div class="module-title">Movement, Muscle, and Metabolic Efficiency</div>
+    <div class="module-time">7:24</div>
+    <a href="https://youtu.be/pROHg071mb8" target="_blank">Watch →</a>
 </div>
 
 <div class="module">
-<div class="module-number">Module 8</div>
-<div class="module-title">Integration — Making Sense of Your Energy Patterns</div>
-<div class="module-time">6:10</div>
-<a href="https://youtu.be/8P7K6PMbzvY" target="_blank">Watch →</a>
+    <div class="module-number">Module 8</div>
+    <div class="module-title">Integration — Making Sense of Your Energy Patterns</div>
+    <div class="module-time">6:10</div>
+    <a href="https://youtu.be/8P7K6PMbzvY" target="_blank">Watch →</a>
 </div>
 
 <div class="module">
-<div class="module-number">Outro</div>
-<div class="module-title">Outro</div>
-<div class="module-time">0:47</div>
-<a href="https://youtu.be/UVKSpq8Kjeg" target="_blank">Watch →</a>
+    <div class="module-number">Outro</div>
+    <div class="module-title">Outro</div>
+    <div class="module-time">0:47</div>
+    <a href="https://youtu.be/UVKSpq8Kjeg" target="_blank">Watch →</a>
 </div>
 
 </div>
@@ -463,7 +439,6 @@ Each module builds on the previous one, gradually connecting how sleep, stress p
 <img src="photo.jpg" alt="Rebecca Jeffers MD" class="about-photo">
 
 <div>
-
 <p>
 I’m a board-certified endocrinologist who works with patients whose symptoms often do not match their lab results.
 </p>
@@ -477,11 +452,9 @@ The goal is not to diagnose or replace medical care. It is to provide a clearer 
 </p>
 
 <div class="disclaimer">
-
 <p>
 <strong>Medical note:</strong> This content is educational and is not medical advice. Persistent or worsening symptoms should be discussed with your clinician.
 </p>
-
 </div>
 
 </div>
