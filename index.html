@@ -12,19 +12,18 @@
 
   <style>
     :root {
-      --navy: #0b1b31;
-      --navy-2: #132944;
-      --blue: #2a4b82;
-      --sage: #9bbf94;
+      --navy: #08172a;
+      --navy-2: #10243d;
+      --blue: #223f70;
+      --sage: #7f9f7a;
       --cream: #f4f1ea;
       --text: rgba(244, 241, 234, 0.96);
       --soft: rgba(244, 241, 234, 0.74);
-      --muted: rgba(244, 241, 234, 0.58);
-      --line: rgba(244, 241, 234, 0.13);
-      --line-soft: rgba(244, 241, 234, 0.08);
-      --card: rgba(255, 255, 255, 0.055);
-      --card-strong: rgba(255, 255, 255, 0.085);
-      --shadow: 0 30px 90px rgba(0, 0, 0, 0.28);
+      --muted: rgba(244, 241, 234, 0.56);
+      --line: rgba(244, 241, 234, 0.12);
+      --line-soft: rgba(244, 241, 234, 0.075);
+      --card: rgba(255, 255, 255, 0.05);
+      --shadow: 0 28px 80px rgba(0, 0, 0, 0.28);
       --radius: 30px;
     }
 
@@ -43,9 +42,9 @@
       font-weight: 350;
       line-height: 1.75;
       background:
-        radial-gradient(circle at 18% 0%, rgba(155, 191, 148, 0.36), transparent 34%),
-        radial-gradient(circle at 82% 16%, rgba(244, 241, 234, 0.08), transparent 28%),
-        linear-gradient(135deg, #9bbf94 0%, #54768d 32%, #2a4b82 66%, #0b1b31 100%);
+        radial-gradient(circle at 12% 0%, rgba(127, 159, 122, 0.22), transparent 34%),
+        radial-gradient(circle at 86% 10%, rgba(244, 241, 234, 0.045), transparent 28%),
+        linear-gradient(135deg, #6f8f78 0%, #435f74 32%, #223f70 68%, #08172a 100%);
       background-attachment: fixed;
     }
 
@@ -55,10 +54,10 @@
       inset: 0;
       pointer-events: none;
       background-image:
-        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
-      background-size: 64px 64px;
-      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.38), transparent 70%);
+        linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.016) 1px, transparent 1px);
+      background-size: 68px 68px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.32), transparent 70%);
     }
 
     body::after {
@@ -66,8 +65,8 @@
       position: fixed;
       inset: 0;
       pointer-events: none;
-      opacity: 0.16;
-      background-image: radial-gradient(rgba(255,255,255,0.32) 0.5px, transparent 0.5px);
+      opacity: 0.11;
+      background-image: radial-gradient(rgba(255,255,255,0.28) 0.5px, transparent 0.5px);
       background-size: 3px 3px;
       mix-blend-mode: soft-light;
     }
@@ -79,7 +78,7 @@
     }
 
     header {
-      padding: 38px 0 28px;
+      padding: 38px 0 34px;
     }
 
     .brand {
@@ -90,7 +89,7 @@
     }
 
     .logo {
-      width: min(310px, 62vw);
+      width: min(300px, 62vw);
       height: auto;
       display: block;
       filter: drop-shadow(0 12px 26px rgba(0,0,0,0.24));
@@ -100,7 +99,7 @@
       font-size: 0.74rem;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: rgba(244,241,234,0.62);
+      color: rgba(244,241,234,0.58);
       text-align: right;
       font-weight: 500;
     }
@@ -111,13 +110,13 @@
 
     .hero-shell {
       position: relative;
-      margin-top: 18px;
-      padding: clamp(38px, 6vw, 74px);
+      margin-top: 8px;
+      padding: clamp(44px, 6vw, 76px) clamp(28px, 6vw, 74px);
       border-radius: 38px;
       border: 1px solid var(--line);
       background:
-        radial-gradient(circle at 50% 16%, rgba(244,241,234,0.08), transparent 32%),
-        linear-gradient(180deg, rgba(12, 29, 51, 0.62), rgba(12, 29, 51, 0.38));
+        radial-gradient(circle at 50% 0%, rgba(244,241,234,0.055), transparent 34%),
+        linear-gradient(180deg, rgba(8, 23, 42, 0.64), rgba(8, 23, 42, 0.36));
       box-shadow: var(--shadow);
       backdrop-filter: blur(18px);
       overflow: hidden;
@@ -127,33 +126,26 @@
       content: "";
       position: absolute;
       top: 0;
-      left: 16%;
-      right: 16%;
+      left: 18%;
+      right: 18%;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(244,241,234,0.42), transparent);
+      background: linear-gradient(90deg, transparent, rgba(244,241,234,0.34), transparent);
     }
 
     .hero {
-      min-height: 64vh;
+      min-height: 50vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
     }
 
-    .hero-logo {
-      width: min(180px, 44vw);
-      margin: 0 auto 38px;
-      display: block;
-      box-shadow: 0 18px 48px rgba(0,0,0,0.20);
-    }
-
     .eyebrow {
-      margin-bottom: 26px;
-      font-size: 0.78rem;
+      margin-bottom: 24px;
+      font-size: 0.76rem;
       letter-spacing: 0.22em;
       text-transform: uppercase;
-      color: rgba(244,241,234,0.62);
+      color: rgba(244,241,234,0.60);
       font-weight: 600;
     }
 
@@ -165,17 +157,17 @@
 
     h1 {
       font-family: Inter, system-ui, sans-serif;
-      font-size: clamp(3.5rem, 7.8vw, 7.1rem);
-      font-weight: 450;
-      max-width: 880px;
+      font-size: clamp(3.2rem, 6.8vw, 6.15rem);
+      font-weight: 430;
+      max-width: 860px;
     }
 
     .subtitle {
-      margin: 42px auto 0;
+      margin: 34px auto 0;
       max-width: 760px;
       color: var(--soft);
-      font-size: clamp(1.08rem, 1.5vw, 1.28rem);
-      line-height: 1.95;
+      font-size: clamp(1.05rem, 1.45vw, 1.22rem);
+      line-height: 1.9;
     }
 
     .clinical-observations {
@@ -183,23 +175,23 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 14px;
-      margin-top: 70px;
+      margin-top: 56px;
     }
 
     .observation {
       text-align: left;
-      padding: 22px 24px;
-      border-radius: 20px;
+      padding: 20px 22px;
+      border-radius: 19px;
       border: 1px solid var(--line-soft);
-      background: rgba(255,255,255,0.035);
-      color: rgba(244,241,234,0.78);
-      font-size: 0.98rem;
+      background: rgba(255,255,255,0.03);
+      color: rgba(244,241,234,0.76);
+      font-size: 0.96rem;
       line-height: 1.55;
     }
 
     .section {
-      padding: 88px 0;
-      border-bottom: 1px solid rgba(244,241,234,0.08);
+      padding: 84px 0;
+      border-bottom: 1px solid rgba(244,241,234,0.075);
     }
 
     .section-head {
@@ -215,59 +207,116 @@
 
     h2 {
       font-family: "Source Serif 4", Georgia, serif;
-      font-size: clamp(2.45rem, 4.5vw, 4.6rem);
-      font-weight: 450;
+      font-size: clamp(2.35rem, 4.2vw, 4.25rem);
+      font-weight: 430;
     }
 
     .section-head p {
-      margin: 24px 0 0;
+      margin: 22px 0 0;
       color: var(--soft);
-      font-size: 1.08rem;
+      font-size: 1.06rem;
       line-height: 1.85;
     }
 
     .video-panel {
-      max-width: 940px;
+      max-width: 900px;
       margin: 0 auto;
       padding: clamp(14px, 2vw, 22px);
       border-radius: 30px;
       border: 1px solid var(--line);
       background:
-        linear-gradient(135deg, rgba(155,191,148,0.18), rgba(42,75,130,0.16)),
-        rgba(255,255,255,0.035);
+        linear-gradient(135deg, rgba(127,159,122,0.13), rgba(34,63,112,0.15)),
+        rgba(255,255,255,0.032);
       box-shadow: 0 30px 80px rgba(0,0,0,0.26);
     }
 
-    .video-frame {
+    .custom-video {
       position: relative;
+      display: grid;
+      place-items: center;
       overflow: hidden;
-      border-radius: 24px;
+      min-height: 420px;
       aspect-ratio: 16 / 9;
-      background: #071629;
+      border-radius: 24px;
       border: 1px solid rgba(244,241,234,0.12);
+      text-decoration: none;
+      color: var(--cream);
+      background:
+        radial-gradient(circle at 50% 40%, rgba(244,241,234,0.08), transparent 32%),
+        linear-gradient(135deg, rgba(127,159,122,0.50), rgba(34,63,112,0.76)),
+        #08172a;
     }
 
-    .video-frame iframe {
-      width: 100%;
-      height: 100%;
-      border: 0;
+    .custom-video::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(8,23,42,0.18), rgba(8,23,42,0.56));
+    }
+
+    .custom-video-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 34px;
+    }
+
+    .video-logo {
+      width: min(230px, 48vw);
       display: block;
+      margin: 0 auto 28px;
+      box-shadow: 0 20px 54px rgba(0,0,0,0.22);
+    }
+
+    .video-title {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: clamp(2.1rem, 4.2vw, 4rem);
+      line-height: 1.05;
+      letter-spacing: -0.045em;
+      font-weight: 430;
+      margin-bottom: 22px;
+    }
+
+    .play-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 13px 20px;
+      border-radius: 999px;
+      border: 1px solid rgba(244,241,234,0.22);
+      background: rgba(8,23,42,0.42);
+      color: rgba(244,241,234,0.92);
+      font-size: 0.96rem;
+      font-weight: 500;
+      backdrop-filter: blur(12px);
+    }
+
+    .play-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: rgba(244,241,234,0.92);
+      color: var(--navy);
+      font-size: 0.9rem;
+      line-height: 1;
     }
 
     .content-card {
-      max-width: 940px;
+      max-width: 900px;
       margin: 0 auto;
       border: 1px solid var(--line);
-      background: rgba(255,255,255,0.055);
+      background: rgba(255,255,255,0.045);
       border-radius: var(--radius);
       padding: clamp(28px, 5vw, 50px);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.14);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.13);
     }
 
     .content-card p {
       margin: 0 0 24px;
       color: var(--soft);
-      font-size: 1.06rem;
+      font-size: 1.05rem;
       line-height: 1.85;
     }
 
@@ -297,18 +346,18 @@
       padding: 22px 26px;
       border-radius: 20px;
       border: 1px solid var(--line-soft);
-      background: rgba(255,255,255,0.045);
+      background: rgba(255,255,255,0.038);
       transition: 180ms ease;
     }
 
     .module:hover {
-      background: rgba(255,255,255,0.075);
+      background: rgba(255,255,255,0.068);
       transform: translateY(-1px);
-      border-color: rgba(244,241,234,0.18);
+      border-color: rgba(244,241,234,0.16);
     }
 
     .module-label {
-      color: rgba(203,225,245,0.86);
+      color: rgba(203,225,245,0.82);
       font-size: 0.93rem;
       font-weight: 500;
     }
@@ -360,7 +409,7 @@
       margin-top: 30px;
       padding: 24px 26px;
       border-radius: 22px;
-      background: rgba(9, 24, 43, 0.38);
+      background: rgba(8, 23, 42, 0.42);
       border: 1px solid var(--line-soft);
       color: rgba(244,241,234,0.76);
       font-size: 0.98rem;
@@ -408,11 +457,19 @@
       }
 
       .hero-shell {
-        padding: 34px 22px;
+        padding: 38px 22px;
       }
 
       .section {
         padding: 64px 0;
+      }
+
+      h1 {
+        font-size: clamp(3rem, 13vw, 4.8rem);
+      }
+
+      .custom-video {
+        min-height: 330px;
       }
     }
   </style>
@@ -430,8 +487,6 @@
     <main>
       <section class="hero-shell">
         <div class="hero">
-          <img src="logo.jpg" alt="The Rhythm of Energy logo" class="hero-logo" />
-
           <div class="eyebrow">BOARD-CERTIFIED ENDOCRINOLOGIST</div>
 
           <h1>Normal Labs.<br />Still Exhausted.</h1>
@@ -459,9 +514,16 @@
         </div>
 
         <div class="video-panel">
-          <div class="video-frame">
-            <iframe src="https://www.youtube.com/embed/syiMPGoUdGA" title="Welcome video" allowfullscreen></iframe>
-          </div>
+          <a class="custom-video" href="https://www.youtube.com/watch?v=syiMPGoUdGA" target="_blank" rel="noopener">
+            <div class="custom-video-content">
+              <img src="logo.jpg" alt="The Rhythm of Energy logo" class="video-logo" />
+              <div class="video-title">Welcome to<br />The Rhythm of Energy</div>
+              <div class="play-button">
+                <span class="play-icon">▶</span>
+                Watch the welcome video
+              </div>
+            </div>
+          </a>
         </div>
       </section>
 
