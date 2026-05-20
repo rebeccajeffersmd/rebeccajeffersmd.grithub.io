@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -25,14 +22,11 @@
       --blue: #24446f;
       --sage: #708870;
       --cream: #f4f1ea;
-
       --text: rgba(244,241,234,0.94);
       --soft: rgba(244,241,234,0.75);
       --muted: rgba(244,241,234,0.56);
-
       --line: rgba(244,241,234,0.11);
       --line-soft: rgba(244,241,234,0.07);
-
       --card-hover: rgba(255,255,255,0.065);
       --shadow: 0 28px 70px rgba(0,0,0,0.24);
     }
@@ -187,6 +181,7 @@
       background: rgba(255,255,255,0.035);
       border: 1px solid var(--line);
       box-shadow: var(--shadow);
+      overflow: hidden;
     }
 
     .custom-video {
@@ -194,6 +189,7 @@
       display: grid;
       place-items: center;
       overflow: hidden;
+      width: 100%;
       aspect-ratio: 16 / 9;
       min-height: 340px;
       border-radius: 22px;
@@ -218,10 +214,12 @@
       z-index: 2;
       text-align: center;
       padding: 30px;
+      max-width: 100%;
     }
 
     .video-logo {
       width: min(180px, 40vw);
+      max-width: 100%;
       display: block;
       margin: 0 auto 24px;
       box-shadow: 0 18px 40px rgba(0,0,0,0.22);
@@ -257,6 +255,7 @@
       background: rgba(244,241,234,0.94);
       color: var(--navy);
       font-size: 0.82rem;
+      flex: 0 0 auto;
     }
 
     .content-card {
@@ -384,12 +383,63 @@
         gap: 7px;
       }
 
-      .custom-video {
-        min-height: 300px;
-      }
-
       section {
         padding: 56px 0;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .page {
+        width: min(100% - 28px, 1080px);
+      }
+
+      header {
+        padding: 24px 0 14px;
+      }
+
+      .hero {
+        padding: 30px 20px;
+        border-radius: 26px;
+      }
+
+      h1 {
+        font-size: clamp(2.35rem, 12vw, 3.35rem);
+      }
+
+      .video-panel {
+        padding: 10px;
+        border-radius: 22px;
+      }
+
+      .custom-video {
+        min-height: 0;
+        aspect-ratio: 16 / 9;
+        border-radius: 18px;
+      }
+
+      .custom-video-content {
+        padding: 18px 12px;
+      }
+
+      .video-logo {
+        width: min(118px, 36vw);
+        margin-bottom: 12px;
+      }
+
+      .video-title {
+        font-size: clamp(1.55rem, 9vw, 2.15rem);
+        margin-bottom: 14px;
+      }
+
+      .play-button {
+        padding: 9px 14px;
+        font-size: 0.86rem;
+      }
+
+      .play-icon {
+        width: 26px;
+        height: 26px;
+        font-size: 0.72rem;
       }
     }
   </style>
@@ -501,16 +551,16 @@
       </section>
 
       <section id="modules">
-       <div class="section-head" style="max-width: 980px;">
-  <h2>
-    What You’ll Learn
-  </h2>
+        <div class="section-head" style="max-width: 980px;">
+          <h2>
+            What You’ll Learn
+          </h2>
 
-  <p style="max-width: 920px;">
-    Each module builds on the previous one. While you can jump to specific topics,
-    the course is designed to work best when completed in order so the larger physiology patterns become clearer over time.
-  </p>
-</div>
+          <p style="max-width: 920px;">
+            Each module builds on the previous one. While you can jump to specific topics,
+            the course is designed to work best when completed in order so the larger physiology patterns become clearer over time.
+          </p>
+        </div>
 
         <div class="modules">
 
