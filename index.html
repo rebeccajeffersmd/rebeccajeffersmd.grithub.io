@@ -11,6 +11,10 @@
     content="A free physician-created educational course explaining why fatigue, brain fog, and energy crashes can persist even when labs appear normal."
   />
 
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -31,7 +35,7 @@
       --line: rgba(244,241,234,0.11);
       --line-soft: rgba(244,241,234,0.07);
 
-      --card-hover: rgba(255,255,255,0.065);
+      --card-hover: rgba(255,255,255,0.05);
       --shadow: 0 28px 70px rgba(0,0,0,0.24);
     }
 
@@ -80,17 +84,17 @@
     }
 
     header {
-      padding: 30px 0 18px;
+      padding: 28px 0 16px;
       text-align: center;
     }
 
     .top-logo {
-      width: min(190px, 42vw);
+      width: min(185px, 42vw);
 
       display: block;
       margin: 0 auto;
 
-      filter: drop-shadow(0 14px 26px rgba(0,0,0,0.22));
+      filter: drop-shadow(0 10px 20px rgba(0,0,0,0.16));
     }
 
     .hero {
@@ -161,7 +165,7 @@
 
       border-radius: 18px;
 
-      background: rgba(255,255,255,0.035);
+      background: rgba(255,255,255,0.03);
       border: 1px solid var(--line-soft);
 
       color: rgba(244,241,234,0.76);
@@ -210,7 +214,7 @@
 
       border-radius: 28px;
 
-      background: rgba(255,255,255,0.035);
+      background: rgba(255,255,255,0.03);
       border: 1px solid var(--line);
 
       box-shadow: var(--shadow);
@@ -329,7 +333,7 @@
 
       border-radius: 28px;
 
-      background: rgba(255,255,255,0.04);
+      background: rgba(255,255,255,0.035);
       border: 1px solid var(--line);
 
       box-shadow: 0 18px 54px rgba(0,0,0,0.12);
@@ -376,16 +380,18 @@
 
       border: 1px solid var(--line-soft);
 
-      background: rgba(255,255,255,0.036);
+      background: rgba(255,255,255,0.03);
 
-      transition: 180ms ease;
+      transition:
+        background 180ms ease,
+        border-color 180ms ease,
+        transform 180ms ease;
     }
 
     .module:hover {
       background: var(--card-hover);
+      border-color: rgba(244,241,234,0.14);
       transform: translateY(-1px);
-
-      border-color: rgba(244,241,234,0.16);
     }
 
     .module-label {
@@ -600,7 +606,7 @@
 
           <a
             class="custom-video"
-            href="https://youtu.be/wdWq3z1BVQQ"
+            href="https://www.youtube.com/watch?v=wdWq3z1BVQQ&list=PLkV4YyHOZHYmk2VRbKDl-PX0t9TAPfRB2"
             target="_blank"
             rel="noopener"
           >
@@ -676,35 +682,35 @@
 
         <div class="modules">
 
-          <a class="module" href="https://youtu.be/j2lSoxadhVg" target="_blank" rel="noopener">
+          <a class="module" href="https://www.youtube.com/watch?v=wKuO7mBnuLU&list=PLkV4YyHOZHYmk2VRbKDl-PX0t9TAPfRB2&index=2" target="_blank" rel="noopener">
             <div class="module-label">Intro</div>
-            <div class="module-title">Introduction</div>
+            <div class="module-title">Before You Begin</div>
             <div class="duration">1:34</div>
             <div class="watch">Watch →</div>
           </a>
 
-          <a class="module" href="https://youtu.be/H24hpRijWZk" target="_blank" rel="noopener">
+          <a class="module" href="https://www.youtube.com/watch?v=H24hpRijWZk&list=PLkV4YyHOZHYmk2VRbKDl-PX0t9TAPfRB2&index=3" target="_blank" rel="noopener">
             <div class="module-label">Module 1</div>
             <div class="module-title">Energy & Fatigue — Understanding Your Body's Signals</div>
             <div class="duration">6:24</div>
             <div class="watch">Watch →</div>
           </a>
 
-          <a class="module" href="https://youtu.be/l3Hp4e2lMak" target="_blank" rel="noopener">
+          <a class="module" href="https://www.youtube.com/watch?v=l3Hp4e2lMak&list=PLkV4YyHOZHYmk2VRbKDl-PX0t9TAPfRB2&index=4" target="_blank" rel="noopener">
             <div class="module-label">Module 2</div>
             <div class="module-title">Lab Literacy — What “Normal” Really Means</div>
             <div class="duration">4:00</div>
             <div class="watch">Watch →</div>
           </a>
 
-          <a class="module" href="https://youtu.be/tQHhrBnsgA0" target="_blank" rel="noopener">
+          <a class="module" href="https://www.youtube.com/watch?v=tQHhrBnsgA0&list=PLkV4YyHOZHYmk2VRbKDl-PX0t9TAPfRB2&index=5" target="_blank" rel="noopener">
             <div class="module-label">Module 3</div>
             <div class="module-title">Thyroid — What It Does and What It Doesn't Explain</div>
             <div class="duration">5:25</div>
             <div class="watch">Watch →</div>
           </a>
 
-          <a class="module" href="https://youtu.be/fJi3YcIBNm0" target="_blank" rel="noopener">
+          <a class="module" href="https://www.youtube.com/watch?v=fJi3YcIBNm0&list=PLkV4YyHOZHYmk2VRbKDl-PX0t9TAPfRB2&index=6" target="_blank" rel="noopener">
             <div class="module-label">Module 4</div>
             <div class="module-title">
               Why You Feel Wired, Tired, or Drained — The Autonomic Nervous System and the Hypothalamic-Pituitary-Adrenal Axis
@@ -713,35 +719,35 @@
             <div class="watch">Watch →</div>
           </a>
 
-          <a class="module" href="https://youtu.be/S_brF85yRmg" target="_blank" rel="noopener">
+          <a class="module" href="https://www.youtube.com/watch?v=S_brF85yRmg&list=PLkV4YyHOZHYmk2VRbKDl-PX0t9TAPfRB2&index=7" target="_blank" rel="noopener">
             <div class="module-label">Module 5</div>
             <div class="module-title">Sleep and Circadian Rhythm — Training Your 24-Hour Energy Clock</div>
             <div class="duration">10:55</div>
             <div class="watch">Watch →</div>
           </a>
 
-          <a class="module" href="https://youtu.be/PbVPp1uSFy4" target="_blank" rel="noopener">
+          <a class="module" href="https://www.youtube.com/watch?v=PbVPp1uSFy4&list=PLkV4YyHOZHYmk2VRbKDl-PX0t9TAPfRB2&index=8" target="_blank" rel="noopener">
             <div class="module-label">Module 6</div>
             <div class="module-title">Nutrition and Metabolic Stability — How Food, Timing, and Composition Affect Energy</div>
             <div class="duration">16:06</div>
             <div class="watch">Watch →</div>
           </a>
 
-          <a class="module" href="https://youtu.be/pROHg071mb8" target="_blank" rel="noopener">
+          <a class="module" href="https://www.youtube.com/watch?v=pROHg071mb8&list=PLkV4YyHOZHYmk2VRbKDl-PX0t9TAPfRB2&index=9" target="_blank" rel="noopener">
             <div class="module-label">Module 7</div>
             <div class="module-title">Movement, Muscle, and Metabolic Efficiency</div>
             <div class="duration">8:53</div>
             <div class="watch">Watch →</div>
           </a>
 
-          <a class="module" href="https://youtu.be/8P7K6PMbzvY" target="_blank" rel="noopener">
+          <a class="module" href="https://www.youtube.com/watch?v=8P7K6PMbzvY&list=PLkV4YyHOZHYmk2VRbKDl-PX0t9TAPfRB2&index=10" target="_blank" rel="noopener">
             <div class="module-label">Module 8</div>
             <div class="module-title">Integration — Making Sense of Your Energy Patterns</div>
             <div class="duration">7:48</div>
             <div class="watch">Watch →</div>
           </a>
 
-          <a class="module" href="https://youtu.be/UVKSpq8Kjeg" target="_blank" rel="noopener">
+          <a class="module" href="https://www.youtube.com/watch?v=UVKSpq8Kjeg&list=PLkV4YyHOZHYmk2VRbKDl-PX0t9TAPfRB2&index=11" target="_blank" rel="noopener">
             <div class="module-label">Outro</div>
             <div class="module-title">Closing Thoughts</div>
             <div class="duration">1:52</div>
