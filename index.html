@@ -62,9 +62,11 @@
       color: var(--text);
       font-family: Inter, sans-serif;
       line-height: 1.7;
+
       background:
         radial-gradient(circle at 8% 0%, rgba(112,136,112,0.14), transparent 32%),
         linear-gradient(135deg, #506b73 0%, #2d4b69 44%, #08192b 100%);
+
       background-attachment: fixed;
     }
 
@@ -73,9 +75,11 @@
       position: fixed;
       inset: 0;
       pointer-events: none;
+
       background-image:
         linear-gradient(rgba(255,255,255,0.012) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255,255,255,0.01) 1px, transparent 1px);
+
       background-size: 70px 70px;
       opacity: 0.42;
     }
@@ -94,4 +98,869 @@
     .top-logo {
       width: min(185px, 42vw);
       display: block;
-     
+      margin: 0 auto;
+      filter: drop-shadow(0 10px 20px rgba(0,0,0,0.16));
+    }
+
+    .nav-links {
+      margin-top: 18px;
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      color: rgba(244,241,234,0.72);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: rgba(244,241,234,0.95);
+      text-decoration: underline;
+    }
+
+    .hero {
+      padding: clamp(34px, 5vw, 52px);
+      border-radius: 32px;
+      border: 1px solid var(--line);
+
+      background:
+        radial-gradient(circle at top center, rgba(244,241,234,0.04), transparent 36%),
+        linear-gradient(180deg, rgba(8,25,43,0.72), rgba(8,25,43,0.42));
+
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .eyebrow {
+      margin-bottom: 18px;
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(244,241,234,0.58);
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+    }
+
+    h1 {
+      font-family: Inter, sans-serif;
+      font-size: clamp(2.7rem, 5vw, 4.7rem);
+      font-weight: 500;
+    }
+
+    h2 {
+      font-family: "Source Serif 4", serif;
+      font-size: clamp(2rem, 3.5vw, 3.2rem);
+      font-weight: 400;
+    }
+
+    .subtitle {
+      max-width: 760px;
+      margin: 24px auto 0;
+      color: var(--soft);
+      font-size: clamp(1rem, 1.4vw, 1.13rem);
+      line-height: 1.82;
+    }
+
+    .clinical-grid {
+      margin-top: 34px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .clinical-card {
+      padding: 18px 20px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--line-soft);
+      color: rgba(244,241,234,0.76);
+      text-align: left;
+      font-size: 0.95rem;
+      line-height: 1.55;
+    }
+
+    section {
+      padding: 64px 0;
+      border-bottom: 1px solid rgba(244,241,234,0.07);
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 34px;
+    }
+
+    .section-head.center {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section-head.compact h2 {
+      font-family: Inter, sans-serif;
+      font-weight: 500;
+      font-size: clamp(2rem, 3vw, 3rem);
+    }
+
+    .section-head p {
+      margin-top: 18px;
+      color: var(--soft);
+      font-size: 1.03rem;
+      line-height: 1.82;
+    }
+
+    .video-panel {
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 18px;
+      border-radius: 28px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .custom-video {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border-radius: 22px;
+      text-decoration: none;
+      color: var(--cream);
+      border: 1px solid rgba(244,241,234,0.12);
+
+      background:
+        linear-gradient(135deg, rgba(112,136,112,0.30), rgba(36,68,111,0.78)),
+        #08192b;
+    }
+
+    .custom-video::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(8,25,43,0.10), rgba(8,25,43,0.58));
+    }
+
+    .custom-video-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .video-logo {
+      width: min(180px, 40vw);
+      display: block;
+      margin: 0 auto 24px;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.22);
+    }
+
+    .video-title {
+      font-family: "Source Serif 4", serif;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.06;
+      letter-spacing: -0.045em;
+      margin-bottom: 22px;
+    }
+
+    .play-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(244,241,234,0.2);
+      background: rgba(8,25,43,0.48);
+      color: rgba(244,241,234,0.92);
+      font-size: 0.94rem;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .play-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: rgba(244,241,234,0.94);
+      color: var(--navy);
+      font-size: 0.82rem;
+      flex-shrink: 0;
+    }
+
+    .content-card {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: clamp(28px, 5vw, 46px);
+      border-radius: 28px;
+      background: rgba(255,255,255,0.035);
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 54px rgba(0,0,0,0.12);
+    }
+
+    .content-card p {
+      margin: 0 0 22px;
+      color: var(--soft);
+      font-size: 1.04rem;
+      line-height: 1.82;
+    }
+
+    ul {
+      margin: 22px 0 0;
+      padding-left: 1.2rem;
+      color: var(--soft);
+    }
+
+    li {
+      margin: 10px 0;
+      padding-left: 4px;
+    }
+
+    .modules {
+      display: grid;
+      gap: 13px;
+    }
+
+    .module {
+      display: grid;
+      grid-template-columns: 110px 1fr auto auto;
+      gap: 18px;
+      align-items: center;
+      padding: 22px 24px;
+      border-radius: 18px;
+      text-decoration: none;
+      color: var(--text);
+      border: 1px solid var(--line-soft);
+      background: rgba(255,255,255,0.03);
+      transition:
+        background 180ms ease,
+        border-color 180ms ease,
+        transform 180ms ease;
+    }
+
+    .module:hover {
+      background: var(--card-hover);
+      border-color: rgba(244,241,234,0.14);
+      transform: translateY(-1px);
+    }
+
+    .module-label {
+      color: rgba(203,225,245,0.82);
+      font-size: 0.92rem;
+      font-weight: 500;
+    }
+
+    .module-title {
+      max-width: 760px;
+      font-size: 0.99rem;
+      font-weight: 500;
+      line-height: 1.42;
+    }
+
+    .duration {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .watch {
+      color: rgba(244,241,234,0.84);
+      font-weight: 500;
+    }
+
+    .resource-section .section-head {
+      max-width: none;
+      width: 100%;
+      margin-bottom: 34px;
+    }
+
+    .resource-section .section-head p {
+      max-width: none;
+      width: 100%;
+    }
+
+    .resources-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .resource-card {
+      padding: 22px 24px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--line-soft);
+      box-shadow: 0 14px 40px rgba(0,0,0,0.08);
+    }
+
+    .resource-card h3 {
+      margin-bottom: 10px;
+      font-family: Inter, sans-serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    .resource-card p {
+      margin: 0 0 16px;
+      color: var(--soft);
+      font-size: 0.96rem;
+      line-height: 1.65;
+    }
+
+    .resource-card a {
+      color: rgba(244,241,234,0.9);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .resource-card a:hover {
+      text-decoration: underline;
+    }
+
+    .resource-note {
+      width: 100%;
+      max-width: none;
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.75;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: clamp(34px, 6vw, 68px);
+      align-items: center;
+    }
+
+    .about-photo {
+      width: 100%;
+      border-radius: 26px;
+      aspect-ratio: 4 / 5.15;
+      object-fit: cover;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .about-copy p {
+      margin-top: 22px;
+      color: var(--soft);
+      font-size: 1.03rem;
+      line-height: 1.86;
+    }
+
+    .disclaimer {
+      max-width: 860px;
+      margin: 0 auto;
+      color: rgba(244,241,234,0.58);
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+
+    footer {
+      padding: 36px 0 60px;
+      text-align: center;
+      color: rgba(244,241,234,0.44);
+      font-size: 0.88rem;
+    }
+
+    @media (max-width: 900px) {
+      .clinical-grid,
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      .module {
+        grid-template-columns: 1fr;
+        gap: 7px;
+      }
+
+      section {
+        padding: 56px 0;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .resources-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .page {
+        width: calc(100% - 24px);
+      }
+
+      .hero {
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: clamp(2.3rem, 11vw, 3.6rem);
+      }
+
+      .video-panel {
+        padding: 10px;
+      }
+
+      .custom-video {
+        aspect-ratio: 16 / 10;
+      }
+
+      .custom-video-content {
+        padding: 20px 12px;
+      }
+
+      .video-logo {
+        width: 110px;
+        margin-bottom: 14px;
+      }
+
+      .video-title {
+        font-size: 1.8rem;
+        margin-bottom: 14px;
+      }
+
+      .play-button {
+        padding: 9px 14px;
+        font-size: 0.84rem;
+      }
+
+      .play-icon {
+        width: 26px;
+        height: 26px;
+        font-size: 0.7rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+
+    <header>
+
+      <img
+        src="logo.jpg"
+        alt="The Rhythm of Energy"
+        class="top-logo"
+      />
+
+      <nav class="nav-links">
+        <a href="#orientation">Start Here</a>
+        <a href="#modules">Videos</a>
+        <a href="#resources">Free Resources</a>
+        <a href="#recommended">Recommendations</a>
+        <a href="#about">About</a>
+      </nav>
+
+    </header>
+
+    <main>
+
+      <section class="hero">
+
+        <div class="eyebrow">
+          BOARD-CERTIFIED ENDOCRINOLOGIST
+        </div>
+
+        <h1>
+          Normal Labs.<br />
+          Still Exhausted?
+        </h1>
+
+        <p class="subtitle">
+          A free physician-created educational course explaining why fatigue,
+          brain fog, and energy crashes can continue even when routine labs look normal.
+        </p>
+
+        <div class="clinical-grid">
+
+          <div class="clinical-card">
+            You sleep long enough but still wake up drained
+          </div>
+
+          <div class="clinical-card">
+            You feel mentally clear for part of the day, then suddenly crash
+          </div>
+
+          <div class="clinical-card">
+            You feel exhausted physically but unable to fully settle at night
+          </div>
+
+        </div>
+
+      </section>
+
+      <section id="orientation">
+
+        <div class="section-head center compact">
+
+          <h2>
+            Is This for You?
+          </h2>
+
+          <p>
+            Dr. Jeffers explains who this course was created for, what it is designed to clarify,
+            and how to decide whether this physician-guided framework fits what you have been experiencing.
+          </p>
+
+        </div>
+
+        <div class="video-panel">
+
+          <a
+            class="custom-video"
+            href="https://www.youtube.com/watch?v=wdWq3z1BVQQ&list=PLkV4YyHOZHYmk2VRbKDl-PX0t9TAPfRB2"
+            target="_blank"
+            rel="noopener"
+          >
+
+            <div class="custom-video-content">
+
+              <img
+                src="logo.jpg"
+                alt="The Rhythm of Energy logo"
+                class="video-logo"
+              />
+
+              <div class="video-title">
+                Start Here
+              </div>
+
+              <div class="play-button">
+                <span class="play-icon">▶</span>
+                Watch
+              </div>
+
+            </div>
+
+          </a>
+
+        </div>
+
+      </section>
+
+      <section>
+
+        <div class="section-head">
+
+          <h2>
+            What This Course Covers
+          </h2>
+
+        </div>
+
+        <div class="content-card">
+
+          <p>
+            Most people are given isolated pieces of the puzzle — sleep, stress,
+            diet, hormones — without understanding how those systems interact across the day.
+          </p>
+
+          <ul>
+            <li>How daily cortisol rhythm shapes energy from morning through night</li>
+            <li>What “normal” thyroid labs do — and do not — tell you</li>
+            <li>Why sleep quality matters just as much as sleep duration</li>
+            <li>How food timing and composition affect focus, cravings, and crashes</li>
+            <li>How movement timing influences metabolic efficiency and energy</li>
+          </ul>
+
+        </div>
+
+      </section>
+
+      <section id="modules">
+
+        <div class="section-head" style="max-width: 980px;">
+
+          <h2>
+            What You’ll Learn
+          </h2>
+
+          <p style="max-width: 920px;">
+            Each module builds on the previous one. While you can jump to specific topics,
+            the course is designed to work best when completed in order so the larger physiology patterns become clearer over time.
+          </p>
+
+        </div>
+
+        <div class="modules">
+
+          <a class="module" href="https://www.youtube.com/watch?v=wKuO7mBnuLU&list=PLkV4YyHOZHYmk2VRbKDl-PX0t9TAPfRB2&index=2" target="_blank" rel="noopener">
+            <div class="module-label">Intro</div>
+            <div class="module-title">Before You Begin</div>
+            <div class="duration">1:24</div>
+            <div class="watch">Watch →</div>
+          </a>
+
+          <a class="module" href="https://www.youtube.com/watch?v=H24hpRijWZk&list=PLkV4YyHOZHYmk2VRbKDl-PX0t9TAPfRB2&index=3" target="_blank" rel="noopener">
+            <div class="module-label">Module 1</div>
+            <div class="module-title">Energy & Fatigue — Understanding Your Body's Signals</div>
+            <div class="duration">6:24</div>
+            <div class="watch">Watch →</div>
+          </a>
+
+          <a class="module" href="https://www.youtube.com/watch?v=l3Hp4e2lMak&list=PLkV4YyHOZHYmk2VRbKDl-PX0t9TAPfRB2&index=4" target="_blank" rel="noopener">
+            <div class="module-label">Module 2</div>
+            <div class="module-title">Lab Literacy — What “Normal” Really Means</div>
+            <div class="duration">4:00</div>
+            <div class="watch">Watch →</div>
+          </a>
+
+          <a class="module" href="https://www.youtube.com/watch?v=tQHhrBnsgA0&list=PLkV4YyHOZHYmk2VRbKDl-PX0t9TAPfRB2&index=5" target="_blank" rel="noopener">
+            <div class="module-label">Module 3</div>
+            <div class="module-title">Thyroid — What It Does and What It Doesn't Explain</div>
+            <div class="duration">5:25</div>
+            <div class="watch">Watch →</div>
+          </a>
+
+          <a class="module" href="https://www.youtube.com/watch?v=fJi3YcIBNm0&list=PLkV4YyHOZHYmk2VRbKDl-PX0t9TAPfRB2&index=6" target="_blank" rel="noopener">
+            <div class="module-label">Module 4</div>
+            <div class="module-title">
+              Why You Feel Wired, Tired, or Drained — The Autonomic Nervous System and the Hypothalamic-Pituitary-Adrenal Axis
+            </div>
+            <div class="duration">6:44</div>
+            <div class="watch">Watch →</div>
+          </a>
+
+          <a class="module" href="https://www.youtube.com/watch?v=S_brF85yRmg&list=PLkV4YyHOZHYmk2VRbKDl-PX0t9TAPfRB2&index=7" target="_blank" rel="noopener">
+            <div class="module-label">Module 5</div>
+            <div class="module-title">Sleep and Circadian Rhythm — Training Your 24-Hour Energy Clock</div>
+            <div class="duration">10:55</div>
+            <div class="watch">Watch →</div>
+          </a>
+
+          <a class="module" href="https://www.youtube.com/watch?v=PbVPp1uSFy4&list=PLkV4YyHOZHYmk2VRbKDl-PX0t9TAPfRB2&index=8" target="_blank" rel="noopener">
+            <div class="module-label">Module 6</div>
+            <div class="module-title">Nutrition and Metabolic Stability — How Food, Timing, and Composition Affect Energy</div>
+            <div class="duration">16:06</div>
+            <div class="watch">Watch →</div>
+          </a>
+
+          <a class="module" href="https://www.youtube.com/watch?v=pROHg071mb8&list=PLkV4YyHOZHYmk2VRbKDl-PX0t9TAPfRB2&index=9" target="_blank" rel="noopener">
+            <div class="module-label">Module 7</div>
+            <div class="module-title">Movement, Muscle, and Metabolic Efficiency</div>
+            <div class="duration">7:24</div>
+            <div class="watch">Watch →</div>
+          </a>
+
+          <a class="module" href="https://www.youtube.com/watch?v=8P7K6PMbzvY&list=PLkV4YyHOZHYmk2VRbKDl-PX0t9TAPfRB2&index=10" target="_blank" rel="noopener">
+            <div class="module-label">Module 8</div>
+            <div class="module-title">Integration — Making Sense of Your Energy Patterns</div>
+            <div class="duration">6:11</div>
+            <div class="watch">Watch →</div>
+          </a>
+
+          <a class="module" href="https://www.youtube.com/watch?v=UVKSpq8Kjeg&list=PLkV4YyHOZHYmk2VRbKDl-PX0t9TAPfRB2&index=11" target="_blank" rel="noopener">
+            <div class="module-label">Outro</div>
+            <div class="module-title">Closing Thoughts</div>
+            <div class="duration">0:48</div>
+            <div class="watch">Watch →</div>
+          </a>
+
+        </div>
+
+      </section>
+
+      <section id="resources" class="resource-section">
+
+        <div class="section-head">
+
+          <h2>
+            Free Resources
+          </h2>
+
+          <p>
+            These handouts are designed to accompany the videos and help you apply the concepts to your own daily patterns.
+          </p>
+
+        </div>
+
+        <div class="resources-grid">
+
+          <div class="resource-card">
+            <h3>14-Day Energy Awareness Log</h3>
+            <p>
+              Track sleep, meals, caffeine, movement, energy, and focus so you can start recognizing your own patterns.
+            </p>
+            <a href="14-day-awareness-log.pdf" target="_blank" rel="noopener">Download PDF →</a>
+          </div>
+
+          <div class="resource-card">
+            <h3>Sleep Handout</h3>
+            <p>
+              A practical overview of sleep, circadian rhythm, caffeine, alcohol, and sleep hygiene.
+            </p>
+            <a href="sleep-handout.pdf" target="_blank" rel="noopener">Download PDF →</a>
+          </div>
+
+          <div class="resource-card">
+            <h3>Nutrition Basics</h3>
+            <p>
+              A simple guide to protein, carbohydrates, fiber, fats, and processed foods.
+            </p>
+            <a href="nutrition-basics.pdf" target="_blank" rel="noopener">Download PDF →</a>
+          </div>
+
+          <div class="resource-card">
+            <h3>Food Intelligence</h3>
+            <p>
+              A practical guide to food quality, processed foods, hunger, energy, and sustainable nutrition choices.
+            </p>
+            <a href="food-intelligence-handout.pdf" target="_blank" rel="noopener">Download PDF →</a>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section id="recommended" class="resource-section">
+
+        <div class="section-head">
+
+          <h2>
+            Recommended Resources
+          </h2>
+
+          <p>
+            A short list of books and podcasts I feel comfortable recommending for people who want to better understand habits, nutrition, metabolism, and endocrine health.
+          </p>
+
+        </div>
+
+        <div class="resources-grid">
+
+          <div class="resource-card">
+            <h3>Docs Who Lift</h3>
+            <p>
+              Evidence-based conversations about nutrition, obesity medicine, exercise, and metabolic health.
+            </p>
+            <a href="https://www.docswholift.com/" target="_blank" rel="noopener">Visit resource →</a>
+          </div>
+
+          <div class="resource-card">
+            <h3>Endocrine Uncovered</h3>
+            <p>
+              Our clinic’s podcast covering endocrine conditions, metabolism, diabetes, thyroid health, and patient education.
+            </p>
+            <a href="https://www.endocrineuncovered.com/" target="_blank" rel="noopener">Visit resource →</a>
+          </div>
+
+          <div class="resource-card">
+            <h3>Atomic Habits</h3>
+            <p>
+              A practical book on behavior change, habit formation, and making small changes easier to sustain.
+            </p>
+          </div>
+
+          <div class="resource-card">
+            <h3>How Not to Die</h3>
+            <p>
+              A nutrition-focused book on chronic disease prevention and the role of whole, plant-forward foods.
+            </p>
+          </div>
+
+          <div class="resource-card">
+            <h3>Food Intelligence</h3>
+            <p>
+              A useful resource for understanding food quality, food systems, and the confusing nutrition environment.
+            </p>
+          </div>
+
+        </div>
+
+        <p class="resource-note">
+          Resource recommendations are included for education only and do not replace individualized medical care.
+          As with any book, podcast, or health resource, not every point will apply to every person.
+        </p>
+
+      </section>
+
+      <section id="about">
+
+        <div class="about">
+
+          <img
+            src="photo.jpg"
+            alt="Rebecca Jeffers, MD"
+            class="about-photo"
+          />
+
+          <div class="about-copy">
+
+            <div class="eyebrow">
+              ABOUT THE PHYSICIAN
+            </div>
+
+            <h2>
+              Rebecca Jeffers, MD
+            </h2>
+
+            <p>
+              I’m a board-certified endocrinologist who works with patients whose symptoms
+              often do not match their lab results.
+            </p>
+
+            <p>
+              I created this course because there is rarely enough time in a standard visit
+              to fully explain how sleep, stress physiology, metabolism, hormones,
+              and daily rhythms interact.
+            </p>
+
+            <p>
+              This course is not meant to diagnose or replace medical care. It is meant to provide a clearer
+              understanding of the patterns that may be affecting how you feel day to day.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <section>
+
+        <div class="disclaimer">
+
+          <strong>Medical Disclaimer:</strong>
+
+          This website and educational content are for general informational purposes only
+          and do not constitute medical advice, diagnosis, or treatment.
+
+          They are not a substitute for care from your physician or qualified healthcare professional.
+
+          Persistent or worsening symptoms should be evaluated individually.
+
+        </div>
+
+      </section>
+
+    </main>
+
+    <footer>
+      The Rhythm of Energy · Rebecca Jeffers, MD
+    </footer>
+
+  </div>
+
+</body>
+</html>
