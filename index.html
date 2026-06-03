@@ -37,14 +37,11 @@
       --blue: #24446f;
       --sage: #708870;
       --cream: #f4f1ea;
-
       --text: rgba(244,241,234,0.94);
       --soft: rgba(244,241,234,0.75);
       --muted: rgba(244,241,234,0.56);
-
       --line: rgba(244,241,234,0.11);
       --line-soft: rgba(244,241,234,0.07);
-
       --card-hover: rgba(255,255,255,0.05);
       --shadow: 0 28px 70px rgba(0,0,0,0.24);
     }
@@ -62,11 +59,9 @@
       color: var(--text);
       font-family: Inter, sans-serif;
       line-height: 1.7;
-
       background:
         radial-gradient(circle at 8% 0%, rgba(112,136,112,0.14), transparent 32%),
         linear-gradient(135deg, #506b73 0%, #2d4b69 44%, #08192b 100%);
-
       background-attachment: fixed;
     }
 
@@ -75,11 +70,9 @@
       position: fixed;
       inset: 0;
       pointer-events: none;
-
       background-image:
         linear-gradient(rgba(255,255,255,0.012) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255,255,255,0.01) 1px, transparent 1px);
-
       background-size: 70px 70px;
       opacity: 0.42;
     }
@@ -122,15 +115,18 @@
       text-decoration: underline;
     }
 
+    section {
+      padding: 64px 0;
+      border-bottom: 1px solid rgba(244,241,234,0.07);
+    }
+
     .hero {
       padding: clamp(34px, 5vw, 52px);
       border-radius: 32px;
       border: 1px solid var(--line);
-
       background:
         radial-gradient(circle at top center, rgba(244,241,234,0.04), transparent 36%),
         linear-gradient(180deg, rgba(8,25,43,0.72), rgba(8,25,43,0.42));
-
       box-shadow: var(--shadow);
       text-align: center;
     }
@@ -151,7 +147,6 @@
     }
 
     h1 {
-      font-family: Inter, sans-serif;
       font-size: clamp(2.7rem, 5vw, 4.7rem);
       font-weight: 500;
     }
@@ -188,11 +183,6 @@
       line-height: 1.55;
     }
 
-    section {
-      padding: 64px 0;
-      border-bottom: 1px solid rgba(244,241,234,0.07);
-    }
-
     .section-head {
       max-width: 760px;
       margin-bottom: 34px;
@@ -215,6 +205,11 @@
       color: var(--soft);
       font-size: 1.03rem;
       line-height: 1.82;
+    }
+
+    .wide-head {
+      max-width: none;
+      width: 100%;
     }
 
     .video-panel {
@@ -240,7 +235,6 @@
       text-decoration: none;
       color: var(--cream);
       border: 1px solid rgba(244,241,234,0.12);
-
       background:
         linear-gradient(135deg, rgba(112,136,112,0.30), rgba(36,68,111,0.78)),
         #08192b;
@@ -348,10 +342,7 @@
       color: var(--text);
       border: 1px solid var(--line-soft);
       background: rgba(255,255,255,0.03);
-      transition:
-        background 180ms ease,
-        border-color 180ms ease,
-        transform 180ms ease;
+      transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
     }
 
     .module:hover {
@@ -381,17 +372,6 @@
     .watch {
       color: rgba(244,241,234,0.84);
       font-weight: 500;
-    }
-
-    .resource-section .section-head {
-      max-width: none;
-      width: 100%;
-      margin-bottom: 34px;
-    }
-
-    .resource-section .section-head p {
-      max-width: none;
-      width: 100%;
     }
 
     .resources-grid {
@@ -434,10 +414,59 @@
       text-decoration: underline;
     }
 
+    .social-callout-section {
+      padding: 48px 0;
+    }
+
+    .social-callout {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 28px;
+      align-items: center;
+      padding: 28px 32px;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.035);
+      border: 1px solid var(--line);
+    }
+
+    .social-callout h2 {
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+    }
+
+    .social-callout p {
+      margin: 14px 0 0;
+      color: var(--soft);
+      max-width: 780px;
+    }
+
+    .social-callout a {
+      color: rgba(244,241,234,0.92);
+      font-weight: 600;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .social-callout a:hover {
+      text-decoration: underline;
+    }
+
+    .recommendation-groups {
+      display: grid;
+      gap: 34px;
+    }
+
+    .recommendation-label {
+      margin-bottom: 14px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(244,241,234,0.52);
+    }
+
     .resource-note {
       width: 100%;
-      max-width: none;
-      margin-top: 22px;
+      margin-top: 26px;
       color: var(--muted);
       font-size: 0.9rem;
       line-height: 1.75;
@@ -494,6 +523,12 @@
 
       section {
         padding: 56px 0;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .social-callout {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -557,27 +592,21 @@
   <div class="page">
 
     <header>
-
-      <img
-        src="logo.jpg"
-        alt="The Rhythm of Energy"
-        class="top-logo"
-      />
+      <img src="logo.jpg" alt="The Rhythm of Energy" class="top-logo" />
 
       <nav class="nav-links">
         <a href="#orientation">Start Here</a>
         <a href="#modules">Videos</a>
         <a href="#resources">Free Resources</a>
+        <a href="#more-from-me">Instagram</a>
         <a href="#recommended">Recommendations</a>
         <a href="#about">About</a>
       </nav>
-
     </header>
 
     <main>
 
       <section class="hero">
-
         <div class="eyebrow">
           BOARD-CERTIFIED ENDOCRINOLOGIST
         </div>
@@ -593,7 +622,6 @@
         </p>
 
         <div class="clinical-grid">
-
           <div class="clinical-card">
             You sleep long enough but still wake up drained
           </div>
@@ -605,15 +633,11 @@
           <div class="clinical-card">
             You feel exhausted physically but unable to fully settle at night
           </div>
-
         </div>
-
       </section>
 
       <section id="orientation">
-
         <div class="section-head center compact">
-
           <h2>
             Is This for You?
           </h2>
@@ -622,25 +646,17 @@
             Dr. Jeffers explains who this course was created for, what it is designed to clarify,
             and how to decide whether this physician-guided framework fits what you have been experiencing.
           </p>
-
         </div>
 
         <div class="video-panel">
-
           <a
             class="custom-video"
             href="https://www.youtube.com/watch?v=wdWq3z1BVQQ&list=PLkV4YyHOZHYmk2VRbKDl-PX0t9TAPfRB2"
             target="_blank"
             rel="noopener"
           >
-
             <div class="custom-video-content">
-
-              <img
-                src="logo.jpg"
-                alt="The Rhythm of Energy logo"
-                class="video-logo"
-              />
+              <img src="logo.jpg" alt="The Rhythm of Energy logo" class="video-logo" />
 
               <div class="video-title">
                 Start Here
@@ -650,27 +666,19 @@
                 <span class="play-icon">▶</span>
                 Watch
               </div>
-
             </div>
-
           </a>
-
         </div>
-
       </section>
 
       <section>
-
         <div class="section-head">
-
           <h2>
             What This Course Covers
           </h2>
-
         </div>
 
         <div class="content-card">
-
           <p>
             Most people are given isolated pieces of the puzzle — sleep, stress,
             diet, hormones — without understanding how those systems interact across the day.
@@ -683,15 +691,11 @@
             <li>How food timing and composition affect focus, cravings, and crashes</li>
             <li>How movement timing influences metabolic efficiency and energy</li>
           </ul>
-
         </div>
-
       </section>
 
       <section id="modules">
-
         <div class="section-head" style="max-width: 980px;">
-
           <h2>
             What You’ll Learn
           </h2>
@@ -700,7 +704,6 @@
             Each module builds on the previous one. While you can jump to specific topics,
             the course is designed to work best when completed in order so the larger physiology patterns become clearer over time.
           </p>
-
         </div>
 
         <div class="modules">
@@ -778,13 +781,10 @@
           </a>
 
         </div>
-
       </section>
 
-      <section id="resources" class="resource-section">
-
-        <div class="section-head">
-
+      <section id="resources">
+        <div class="section-head wide-head">
           <h2>
             Free Resources
           </h2>
@@ -792,11 +792,9 @@
           <p>
             These handouts are designed to accompany the videos and help you apply the concepts to your own daily patterns.
           </p>
-
         </div>
 
         <div class="resources-grid">
-
           <div class="resource-card">
             <h3>14-Day Energy Awareness Log</h3>
             <p>
@@ -828,119 +826,115 @@
             </p>
             <a href="food-intelligence-handout.pdf" target="_blank" rel="noopener">Download PDF →</a>
           </div>
-
         </div>
-
       </section>
 
-      <section id="recommended" class="resource-section">
+      <section id="more-from-me" class="social-callout-section">
+        <div class="social-callout">
+          <div>
+            <div class="eyebrow">
+              MORE FROM DR. JEFFERS
+            </div>
 
-        <div class="section-head">
-<section id="more-from-me">
+            <h2>
+              More Educational Content
+            </h2>
 
-  <div class="section-head">
+            <p>
+              For additional evidence-based posts on thyroid disease, fatigue, obesity, menopause, diabetes, cholesterol, nutrition, and common endocrine misconceptions.
+            </p>
+          </div>
 
-    <h2>
-      More Educational Content
-    </h2>
+          <a href="https://www.instagram.com/rebeccajeffersmd/" target="_blank" rel="noopener">
+            Follow @rebeccajeffersmd →
+          </a>
+        </div>
+      </section>
 
-    <p>
-      If you found the course helpful, you can find additional evidence-based educational content on Instagram.
-    </p>
-
-  </div>
-
-  <div class="resources-grid">
-
-    <div class="resource-card">
-      <h3>Instagram</h3>
-      <p>
-        Educational content covering thyroid disease, fatigue, obesity, menopause, diabetes, cholesterol, nutrition, and common endocrine misconceptions.
-      </p>
-      <a href="https://www.instagram.com/rebeccajeffersmd/" target="_blank" rel="noopener">
-        Follow @rebeccajeffersmd →
-      </a>
-    </div>
-
-  </div>
-
-</section>
+      <section id="recommended">
+        <div class="section-head wide-head">
           <h2>
             Recommended Resources
           </h2>
 
-        <p>
-  A short list of books and podcasts I feel comfortable recommending for people who want to better understand sleep, habits, nutrition, metabolism, and endocrine health.
-</p>
-
+          <p>
+            A short list of books and podcasts I feel comfortable recommending for people who want to better understand sleep, habits, nutrition, metabolism, and endocrine health.
+          </p>
         </div>
 
-        <div class="resources-grid">
+        <div class="recommendation-groups">
+          <div>
+            <div class="recommendation-label">
+              Podcasts
+            </div>
 
-          <div class="resource-card">
-            <h3>Docs Who Lift</h3>
-            <p>
-              Evidence-based conversations about nutrition, obesity medicine, exercise, and metabolic health.
-            </p>
-            <a href="https://www.docswholift.com/" target="_blank" rel="noopener">Visit resource →</a>
+            <div class="resources-grid">
+              <div class="resource-card">
+                <h3>Docs Who Lift</h3>
+                <p>
+                  Evidence-based conversations about nutrition, obesity medicine, exercise, and metabolic health.
+                </p>
+                <a href="https://www.docswholift.com/" target="_blank" rel="noopener">Visit resource →</a>
+              </div>
+
+              <div class="resource-card">
+                <h3>Endocrine Uncovered</h3>
+                <p>
+                  Our clinic’s podcast covering endocrine conditions, metabolism, diabetes, thyroid health, and patient education.
+                </p>
+                <a href="https://www.endocrineuncovered.com/" target="_blank" rel="noopener">Visit resource →</a>
+              </div>
+            </div>
           </div>
 
-          <div class="resource-card">
-            <h3>Endocrine Uncovered</h3>
-            <p>
-              Our clinic’s podcast covering endocrine conditions, metabolism, diabetes, thyroid health, and patient education.
-            </p>
-            <a href="https://www.endocrineuncovered.com/" target="_blank" rel="noopener">Visit resource →</a>
-          </div>
-          
-<div class="resource-card">
-  <h3>Why We Sleep</h3>
-  <p>
-    An accessible overview of sleep science, circadian rhythm, sleep deprivation, and the role sleep plays in physical and mental health.
-  </p>
-</div>
-          <div class="resource-card">
-            <h3>Atomic Habits</h3>
-            <p>
-              A practical book on behavior change, habit formation, and making small changes easier to sustain.
-            </p>
-          </div>
+          <div>
+            <div class="recommendation-label">
+              Books
+            </div>
 
-          <div class="resource-card">
-            <h3>How Not to Die</h3>
-            <p>
-              A nutrition-focused book on chronic disease prevention and the role of whole, plant-forward foods.
-            </p>
-          </div>
+            <div class="resources-grid">
+              <div class="resource-card">
+                <h3>Why We Sleep</h3>
+                <p>
+                  An accessible overview of sleep science, circadian rhythm, sleep deprivation, and the role sleep plays in physical and mental health.
+                </p>
+              </div>
 
-          <div class="resource-card">
-            <h3>Food Intelligence</h3>
-            <p>
-              A useful resource for understanding food quality, food systems, and the confusing nutrition environment.
-            </p>
-          </div>
+              <div class="resource-card">
+                <h3>Atomic Habits</h3>
+                <p>
+                  A practical book on behavior change, habit formation, and making small changes easier to sustain.
+                </p>
+              </div>
 
+              <div class="resource-card">
+                <h3>How Not to Die</h3>
+                <p>
+                  A nutrition-focused book on chronic disease prevention and the role of whole, plant-forward foods.
+                </p>
+              </div>
+
+              <div class="resource-card">
+                <h3>Food Intelligence</h3>
+                <p>
+                  A useful resource for understanding food quality, food systems, and the confusing nutrition environment.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <p class="resource-note">
           Resource recommendations are included for education only and do not replace individualized medical care.
           As with any book, podcast, or health resource, not every point will apply to every person.
         </p>
-
       </section>
 
       <section id="about">
-
         <div class="about">
-
-          <img
-            src="photo.jpg"
-            alt="Rebecca Jeffers, MD"
-            class="about-photo"
-          />
+          <img src="photo.jpg" alt="Rebecca Jeffers, MD" class="about-photo" />
 
           <div class="about-copy">
-
             <div class="eyebrow">
               ABOUT THE PHYSICIAN
             </div>
@@ -964,17 +958,12 @@
               This course is not meant to diagnose or replace medical care. It is meant to provide a clearer
               understanding of the patterns that may be affecting how you feel day to day.
             </p>
-
           </div>
-
         </div>
-
       </section>
 
       <section>
-
         <div class="disclaimer">
-
           <strong>Medical Disclaimer:</strong>
 
           This website and educational content are for general informational purposes only
@@ -983,9 +972,7 @@
           They are not a substitute for care from your physician or qualified healthcare professional.
 
           Persistent or worsening symptoms should be evaluated individually.
-
         </div>
-
       </section>
 
     </main>
